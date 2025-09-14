@@ -5,6 +5,12 @@ import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import { authRouter } from './routes/auth.routes.js';
 import { userRouter } from './routes/user.routes.js';
+import { storyRouter } from './routes/story.routes.js';
+import { milestoneRouter } from './routes/milestone.routes.js';
+import { attemptsRouter } from './routes/attempts.routes.js';
+import { mediaRouter } from './routes/media.routes.js';
+
+
 
 export const app = express();
 
@@ -16,6 +22,13 @@ app.use(morgan('dev'));
 
 app.use('/auth', authRouter);
 app.use('/users', userRouter);
+app.use('/stories', storyRouter);
+app.use('/milestones', milestoneRouter);
+app.use('/attempts', attemptsRouter);
+app.use('/media', mediaRouter);
+
+
+
 
 // health
 app.get('/health', (_req, res) => res.json({ ok: true }));
