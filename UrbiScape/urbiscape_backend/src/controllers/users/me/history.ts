@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import mongoose from 'mongoose';
-import { Attempt } from '../../../models/Attempt.js';
-import { Story } from '../../../models/Story.js';
+import { Attempt } from '../../../models/Attempt';
+import { Story } from '../../../models/Story';
 
 const isObjectId = (s: string) => /^[0-9a-fA-F]{24}$/.test(s);
 

@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import { requireAuth } from '../middleware/auth.js';
-import { Attempt } from '../models/Attempt.js';
-import { Story } from '../models/Story.js';
-import { Milestone } from '../models/Milestone.js';
-import { matchesAny } from '../utils/text.js';
-import { haversineM } from '../utils/geo.js';
+import { requireAuth } from '../middleware/auth';
+import { Attempt } from '../models/Attempt';
+import { Story } from '../models/Story';
+import { Milestone } from '../models/Milestone';
+import { matchesAny } from '../utils/text';
+import { haversineM } from '../utils/geo';
 
 export const attemptsRouter = Router();
 
@@ -21,7 +21,7 @@ attemptsRouter.post('/start', requireAuth, async (req, res, next) => {
   } catch (e) { next(e); }
 });
 
-// enviar respuesta (core: text/choice + GPS básico)
+// enviar respuesta (texto/opción + GPS básico)
 attemptsRouter.post('/:id/submit', requireAuth, async (req, res, next) => {
   try {
     const { answerText, lat, lng } = req.body as { answerText?: string; lat?: number; lng?: number };
@@ -35,7 +35,7 @@ attemptsRouter.post('/:id/submit', requireAuth, async (req, res, next) => {
     const m = await Milestone.findById(step.milestone);
     if (!m) return res.status(404).json({ error: 'Hito no encontrado' });
 
-    // 1) GPS básico si el milestone tiene ubicación
+    // GPS
     if (m.location?.coordinates && typeof lat === 'number' && typeof lng === 'number') {
       const [lng0, lat0] = m.location.coordinates;
       const dist = haversineM(lat, lng, lat0, lng0);
@@ -44,7 +44,7 @@ attemptsRouter.post('/:id/submit', requireAuth, async (req, res, next) => {
       if (dist > max) return res.status(200).json({ ok: false, reason: 'far', distanceM: dist, maxM: max });
     }
 
-    // 2) validación texto/opción si procede
+    // texto/opción
     let ok = true;
     if (m.riddle?.acceptedAnswers?.length) {
       if (!answerText) return res.status(400).json({ error: 'Falta answerText' });
@@ -61,16 +61,16 @@ attemptsRouter.post('/:id/submit', requireAuth, async (req, res, next) => {
       step.deltaScore = delta;
       a.currentOrder += 1;
 
-      // si no quedan más, finaliza
-      const remaining = a.steps.length - a.currentOrder;
-      if (remaining <= 0) a.finishedAt = new Date();
+      if (a.steps.length - a.currentOrder <= 0) {
+        a.finishedAt = new Date();
+      }
     }
     await a.save();
     res.json({ ok, attempt: a });
   } catch (e) { next(e); }
 });
 
-// pista (descuento de puntos)
+// pista
 attemptsRouter.post('/:id/hint', requireAuth, async (req, res, next) => {
   try {
     const a = await Attempt.findById(req.params.id);
