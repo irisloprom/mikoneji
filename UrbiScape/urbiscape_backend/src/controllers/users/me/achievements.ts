@@ -1,14 +1,12 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import mongoose from 'mongoose';
 import { Achievement } from '../../../models/Achievement';
 import { Story } from '../../../models/Story';
-
-const isObjectId = (s: string) => /^[0-9a-fA-F]{24}$/.test(s);
+import { isObjectId, toObjectId } from '../../../utils/objectId';
 
 async function resolveStoryId(idOrSlug?: string) {
   if (!idOrSlug) return undefined;
-  if (isObjectId(idOrSlug)) return new mongoose.Types.ObjectId(idOrSlug);
+  if (isObjectId(idOrSlug)) return toObjectId(idOrSlug);
   const s = await Story.findOne({ slug: idOrSlug }).select('_id').lean();
   return s?._id;
 }

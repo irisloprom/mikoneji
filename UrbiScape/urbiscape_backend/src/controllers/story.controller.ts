@@ -1,9 +1,10 @@
 // src/controllers/story.controller.ts
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import { Story } from '../models/Story.js';
-import { Milestone } from '../models/Milestone.js';
-import { slugify } from '../utils/slug.js';
+import { Story } from '../models/Story';
+import { Milestone } from '../models/Milestone';
+import { slugify } from '../utils/slug';
+import { isObjectId } from '../utils/objectId';
 
 const storyBody = z.object({
   title: z.string(),
@@ -61,10 +62,9 @@ export async function getStories(req: Request, res: Response) {
 
 // GET /stories/:idOrSlug
 export async function getStory(req: Request, res: Response) {
-  const idOrSlug = req.params.id;
-  const story = await Story.findOne(
-    idOrSlug.match(/^[0-9a-f]{24}$/i) ? { _id: idOrSlug } : { slug: idOrSlug }
-  );
+  const idOrSlug = (req.params as any).idOrSlug ?? req.params.id;
+  const query = isObjectId(idOrSlug) ? { _id: idOrSlug } : { slug: idOrSlug };
+  const story = await Story.findOne(query);
   if (!story) return res.status(404).json({ error: 'Historia no encontrada' });
 
   const isEditor = ['admin','editor'].includes(req.user?.role || '');
@@ -150,6 +150,7 @@ export async function postDuplicate(req: Request, res: Response) {
   copy.publishedAt = undefined;
 
   const newStory = await Story.create(copy);
+
   // duplicar milestones
   const ms = await Milestone.find({ story: s._id }).sort({ order: 1 });
   const docs = ms.map(m => {

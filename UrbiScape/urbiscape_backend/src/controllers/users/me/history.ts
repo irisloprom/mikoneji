@@ -1,14 +1,13 @@
+// src/controllers/users/me/history.ts
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import mongoose from 'mongoose';
 import { Attempt } from '../../../models/Attempt';
 import { Story } from '../../../models/Story';
-
-const isObjectId = (s: string) => /^[0-9a-fA-F]{24}$/.test(s);
+import { isObjectId, toObjectId } from '../../../utils/objectId';
 
 async function resolveStoryId(idOrSlug?: string) {
   if (!idOrSlug) return undefined;
-  if (isObjectId(idOrSlug)) return new mongoose.Types.ObjectId(idOrSlug);
+  if (isObjectId(idOrSlug)) return toObjectId(idOrSlug);
   const s = await Story.findOne({ slug: idOrSlug }).select('_id').lean();
   return s?._id;
 }
@@ -17,12 +16,12 @@ export async function getMyHistory(req: Request, res: Response) {
   const q = z.object({
     page: z.coerce.number().min(1).default(1),
     limit: z.coerce.number().min(1).max(100).default(20),
-    finished: z.coerce.boolean().optional(),              // true=terminadas, false=en curso
-    story: z.string().optional(),                         // id o slug
+    finished: z.coerce.boolean().optional(),   // true=terminadas, false=en curso
+    story: z.string().optional(),              // id o slug
     sort: z.enum(['recent', 'score']).default('recent')
   }).parse(req.query);
 
-  const userId = req.user!.sub; // requiere requireAuth en la ruta
+  const userId = req.user!.sub;
 
   const filter: any = { user: userId };
   if (q.finished === true) filter.finishedAt = { $ne: null };
@@ -57,3 +56,30 @@ export async function getMyHistory(req: Request, res: Response) {
       : null;
 
     return {
+      id: String(a._id),
+      story: a.story ? {
+        id: String(a.story._id),
+        title: a.story.title,
+        slug: a.story.slug,
+        coverImageUrl: a.story.coverImageUrl,
+        theme: a.story.theme
+      } : undefined,
+      status: a.finishedAt ? 'completed' : 'in_progress',
+      startedAt: a.startedAt,
+      finishedAt: a.finishedAt,
+      durationSec,
+      score: a.score,
+      currentOrder: a.currentOrder,
+      totals: { totalMilestones, passed, failed },
+      latestActivityAt: a.updatedAt
+    };
+  });
+
+  res.json({
+    page: q.page,
+    pageSize: q.limit,
+    total,
+    pages: Math.max(1, Math.ceil(total / q.limit)),
+    data
+  });
+}

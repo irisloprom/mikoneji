@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { requireAuth, requireRole } from '../middleware/auth';
+import { wrap } from '../utils/wrap';
 import {
   postStory, patchStory, getStories, getStory,
   postPublish, postUnpublish, postArchive, postDuplicate,
@@ -8,9 +9,11 @@ import {
 
 export const storyRouter = Router();
 
-storyRouter.get('/', getStories);
-storyRouter.get('/:idOrSlug', getStory);
-storyRouter.get('/:id/milestones', getStoryMilestones);
+storyRouter.get('/', wrap(getStories));
+
+// ⚠️ RUTA MÁS ESPECÍFICA ANTES que la genérica
+storyRouter.get('/:id/milestones', wrap(getStoryMilestones));
+storyRouter.get('/:idOrSlug', wrap(getStory));
 
 const canEdit = requireRole('editor', 'admin');
 storyRouter.post('/', requireAuth, canEdit, wrap(postStory));
@@ -19,7 +22,3 @@ storyRouter.post('/:id/publish', requireAuth, canEdit, wrap(postPublish));
 storyRouter.post('/:id/unpublish', requireAuth, canEdit, wrap(postUnpublish));
 storyRouter.post('/:id/archive', requireAuth, canEdit, wrap(postArchive));
 storyRouter.post('/:id/duplicate', requireAuth, canEdit, wrap(postDuplicate));
-
-function wrap(handler: any) {
-  return (req, res, next) => Promise.resolve(handler(req, res)).catch(next);
-}

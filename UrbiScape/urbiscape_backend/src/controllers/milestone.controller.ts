@@ -1,8 +1,9 @@
 // src/controllers/milestone.controller.ts
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import { Milestone } from '../models/Milestone.js';
-import { Story } from '../models/Story.js';
+import { Milestone } from '../models/Milestone';
+import { Story } from '../models/Story';
+import { isObjectId } from '../utils/objectId';
 
 const msBody = z.object({
   story: z.string(),
@@ -31,6 +32,25 @@ const msBody = z.object({
   hintPenalty: z.number().int().optional(),
   requiredToComplete: z.boolean().optional()
 });
+
+// GET /milestones/:id
+export async function getMilestone(req: Request, res: Response) {
+  const { id } = req.params;
+  if (!isObjectId(id)) return res.status(400).json({ error: 'ID inválido' });
+
+  const m = await Milestone.findById(id).lean();
+  if (!m) return res.status(404).json({ error: 'Hito no encontrado' });
+
+  const story = await Story.findById(m.story).select('status').lean();
+  if (!story) return res.status(404).json({ error: 'Historia no encontrada' });
+
+  const isEditor = ['admin','editor'].includes(req.user?.role || '');
+  if (!isEditor && story.status !== 'published') {
+    return res.status(403).json({ error: 'No disponible' });
+  }
+
+  res.json(m);
+}
 
 // POST /milestones
 export async function postMilestone(req: Request, res: Response) {

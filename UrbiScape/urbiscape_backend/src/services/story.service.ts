@@ -1,6 +1,7 @@
 import { Story } from '../models/Story';
 import { Milestone } from '../models/Milestone';
 import { slugify } from '../utils/slug';
+import { isObjectId } from '../utils/objectId';
 
 type ListParams = {
   theme?: string;
@@ -34,9 +35,8 @@ export async function listStories(params: ListParams) {
 }
 
 export async function getStoryByIdOrSlug(idOrSlug: string) {
-  return Story.findOne(
-    idOrSlug.match(/^[0-9a-f]{24}$/i) ? { _id: idOrSlug } : { slug: idOrSlug }
-  );
+  const query = isObjectId(idOrSlug) ? { _id: idOrSlug } : { slug: idOrSlug };
+  return Story.findOne(query);
 }
 
 export async function createStory(data: any) {

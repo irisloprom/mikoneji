@@ -5,6 +5,7 @@ import { hashPassword, verifyPassword } from '../utils/password';
 import { signAccessToken } from '../utils/jwt';
 import { verifyFirebaseIdToken } from '../config/firebase';
 import { env } from '../config/env';
+import { parseDurationToMs } from '../utils/time'; // ✅ NUEVO
 
 type ClientMeta = { userAgent?: string; ip?: string };
 
@@ -15,17 +16,7 @@ type LoginGoogleInput = { idToken: string };
 type Tokens = { accessToken: string; refreshToken: string };
 type AuthResult = { user: any; tokens: Tokens };
 
-function parseDuration(s: string, fallbackMs: number): number {
-  // admite "15m", "12h", "30d" (minutos/horas/días)
-  const m = /^(\d+)\s*([mhd])$/.exec(s.trim());
-  if (!m) return fallbackMs;
-  const n = parseInt(m[1], 10);
-  const unit = m[2];
-  if (unit === 'm') return n * 60 * 1000;
-  if (unit === 'h') return n * 60 * 60 * 1000;
-  if (unit === 'd') return n * 24 * 60 * 60 * 1000;
-  return fallbackMs;
-}
+// ❌ Eliminado parseDuration local
 
 function hashRefreshToken(token: string) {
   return crypto.createHash('sha256').update(token).digest('hex');
@@ -34,8 +25,11 @@ function hashRefreshToken(token: string) {
 async function createRefreshToken(userId: string) {
   const token = crypto.randomBytes(48).toString('hex');
   const tokenHash = hashRefreshToken(token);
-  const expiresMs = parseDuration(env.jwtRefreshExpires, 30 * 24 * 60 * 60 * 1000); // 30d
+
+  // ✅ Usa util común
+  const expiresMs = parseDurationToMs(env.jwtRefreshExpires, 30 * 24 * 60 * 60 * 1000); // 30d
   const expiresAt = new Date(Date.now() + expiresMs);
+
   await RefreshToken.create({ user: userId, tokenHash, expiresAt });
   return token;
 }
@@ -104,7 +98,6 @@ export async function loginLocal(input: LoginLocalInput, _meta?: ClientMeta): Pr
 /** LOGIN (Google via Firebase) */
 export async function loginWithGoogle(input: LoginGoogleInput, _meta?: ClientMeta): Promise<AuthResult> {
   const decoded = await verifyFirebaseIdToken(input.idToken);
-  // email puede venir verificado o no según proyecto Firebase
   const email = decoded.email?.toLowerCase();
   const displayName = decoded.name || decoded.email?.split('@')[0] || 'Usuario';
 
@@ -121,13 +114,11 @@ export async function loginWithGoogle(input: LoginGoogleInput, _meta?: ClientMet
         photoURL: decoded.picture,
       });
     } else if (user.provider !== 'google') {
-      // linkea proveedor si antes era local
       user.provider = 'google';
       user.photoURL = user.photoURL || decoded.picture;
       await user.save();
     }
   } else {
-    // fallback: sin email (caso raro), crea usuario "google" sin email
     user = await User.create({
       displayName,
       provider: 'google',
@@ -154,8 +145,8 @@ export async function loginAsGuest(): Promise<AuthResult> {
 /** REFRESH */
 export async function refreshSession(refreshToken: string): Promise<{ tokens: Tokens }> {
   const newRefresh = await rotateRefresh(refreshToken);
-  // obtenemos el userId desde el token borrado (lo devuelve rotateRefresh)
-  // como rotateRefresh retorna el nuevo token pero no el user, volvemos a mirar el token recién creado
+
+  // Volvemos a hallar el user del refresh NUEVO
   const tokenHash = hashRefreshToken(newRefresh);
   const doc = await RefreshToken.findOne({ tokenHash }).lean();
   if (!doc) throw new Error('Refresh inconsistente');
