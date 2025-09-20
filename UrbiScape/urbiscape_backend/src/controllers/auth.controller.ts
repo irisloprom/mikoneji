@@ -1,7 +1,15 @@
+// src/controllers/auth.controller.ts
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import { loginLocal, registerLocal, loginWithGoogle, refreshSession, logout, loginAsGuest } from '../services/auth.service.js';
 import UAParser from 'ua-parser-js';
+import {
+  loginLocal,
+  registerLocal,
+  loginWithGoogle,
+  refreshSession,
+  logout,
+  loginAsGuest
+} from '../services/auth.service.js';
 
 function clientMeta(req: Request) {
   const ua = new UAParser(req.headers['user-agent'] || '').getResult();
@@ -11,15 +19,20 @@ function clientMeta(req: Request) {
   };
 }
 
+function sanitize(user: any) {
+  const { passwordHash, __v, ...clean } = user.toObject ? user.toObject() : user;
+  return clean;
+}
+
 export async function postRegister(req: Request, res: Response) {
   const schema = z.object({
     email: z.string().email(),
     password: z.string().min(8),
-    displayName: z.string().optional()
+    displayName: z.string().min(2).max(80).optional()
   });
-  const data = schema.parse(req.body);
-  const { user, tokens } = await registerLocal(data.email, data.password, data.displayName);
-  res.status(201).json({ user: sanitize(user), tokens });
+  const body = schema.parse(req.body);
+  const out = await registerLocal(body, clientMeta(req));
+  res.status(201).json({ user: sanitize(out.user), tokens: out.tokens });
 }
 
 export async function postLogin(req: Request, res: Response) {
@@ -27,59 +40,41 @@ export async function postLogin(req: Request, res: Response) {
     email: z.string().email(),
     password: z.string().min(8)
   });
-  const data = schema.parse(req.body);
-  const meta = clientMeta(req);
-  const { user, tokens } = await loginLocal(data.email, data.password, meta);
-  res.json({ user: sanitize(user), tokens });
+  const body = schema.parse(req.body);
+  const out = await loginLocal(body, clientMeta(req));
+  res.json({ user: sanitize(out.user), tokens: out.tokens });
 }
 
-export async function postGoogle(req: Request, res: Response) {
-  const schema = z.object({
-    idToken: z.string(),
-    displayName: z.string().optional()
-  });
-  const data = schema.parse(req.body);
-  const meta = clientMeta(req);
-  const { user, tokens } = await loginWithGoogle(data.idToken, data.displayName, meta);
-  res.json({ user: sanitize(user), tokens });
+export async function postLoginGoogle(req: Request, res: Response) {
+  const schema = z.object({ idToken: z.string().min(10) });
+  const body = schema.parse(req.body);
+  const out = await loginWithGoogle(body, clientMeta(req));
+  res.json({ user: sanitize(out.user), tokens: out.tokens });
 }
 
-export async function postGuest(req: Request, res: Response) {
-  const schema = z.object({
-    displayName: z.string().optional()
-  });
-  const data = schema.parse(req.body ?? {});
-  const meta = clientMeta(req);
-  const { user, tokens } = await loginAsGuest(data.displayName ?? 'Guest', meta);
-  res.json({ user: sanitize(user), tokens });
+export async function postLoginGuest(_req: Request, res: Response) {
+  const out = await loginAsGuest();
+  res.json({ user: sanitize(out.user), tokens: out.tokens });
 }
 
 export async function postRefresh(req: Request, res: Response) {
-  const schema = z.object({ refreshToken: z.string() });
-  const data = schema.parse(req.body);
-  const meta = clientMeta(req);
-  const tokens = await refreshSession(data.refreshToken, meta);
-  res.json(tokens);
+  const schema = z.object({ refreshToken: z.string().min(10) });
+  const body = schema.parse(req.body);
+  const out = await refreshSession(body.refreshToken);
+  res.json({ tokens: out.tokens });
 }
 
 export async function postLogout(req: Request, res: Response) {
-  const schema = z.object({ refreshToken: z.string() });
-  const data = schema.parse(req.body);
-  await logout(data.refreshToken);
+  const schema = z.object({ refreshToken: z.string().min(10) });
+  const body = schema.parse(req.body);
+  await logout(body.refreshToken);
   res.json({ ok: true });
 }
 
-// esqueletos reset password (pendiente integrar correo)
-export async function postForgotPassword(req: Request, res: Response) {
-  // generar token y enviarlo por email con provider (Sendgrid, SES...)
+// Esqueletos reset password (pendiente proveedor de correo)
+export async function postForgotPassword(_req: Request, res: Response) {
   res.json({ ok: true, message: 'Si el email existe, enviaremos instrucciones.' });
 }
-export async function postResetPassword(req: Request, res: Response) {
-  // validar token de reset y cambiar contraseña
+export async function postResetPassword(_req: Request, res: Response) {
   res.json({ ok: true });
-}
-
-function sanitize(user: any) {
-  const { passwordHash, __v, ...clean } = user.toObject ? user.toObject() : user;
-  return clean;
 }
