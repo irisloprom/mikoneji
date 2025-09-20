@@ -2,10 +2,10 @@ import 'dotenv/config';
 import fs from 'node:fs';
 import path from 'node:path';
 import { z } from 'zod';
-import { connectDB } from '../config/db';
-import { Story } from '../models/Story';
-import { Milestone } from '../models/Milestone';
-import { slugify } from '../utils/slug';
+import { connectDB } from '../config/db.js';
+import { Story } from '../models/Story.js';
+import { Milestone } from '../models/Milestone.js';
+import { slugify } from '../utils/slug.js';
 
 // === CLI args muy simples ===
 // Ejemplos:

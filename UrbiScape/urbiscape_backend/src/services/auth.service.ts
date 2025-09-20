@@ -1,11 +1,11 @@
 import crypto from 'crypto';
-import { User } from '../models/User';
-import { RefreshToken } from '../models/RefreshToken';
-import { hashPassword, verifyPassword } from '../utils/password';
-import { signAccessToken } from '../utils/jwt';
-import { verifyFirebaseIdToken } from '../config/firebase';
-import { env } from '../config/env';
-import { parseDurationToMs } from '../utils/time'; // ✅ NUEVO
+import { User } from '../models/User.js';
+import { RefreshToken } from '../models/RefreshToken.js';
+import { hashPassword, verifyPassword } from '../utils/password.js';
+import { signAccessToken } from '../utils/jwt.js';
+import { verifyFirebaseIdToken } from '../config/firebase.js';
+import { env } from '../config/env.js';
+import { parseDurationToMs } from '../utils/time.js'; // ✅ NUEVO
 
 type ClientMeta = { userAgent?: string; ip?: string };
 

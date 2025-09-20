@@ -1,6 +1,6 @@
 // src/utils/jwt.ts
 import jwt from 'jsonwebtoken';
-import { env } from '../config/env';
+import { env } from '../config/env.js';
 
 export type AccessPayload = {
   sub: string;                       // user id
