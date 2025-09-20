@@ -1,5 +1,5 @@
 import { Schema, model, Document, Types } from 'mongoose';
-import { IGeoPoint } from './Story';
+import { IGeoPoint } from './Story.js';
 
 export type MilestoneType = 'narrative' | 'location' | 'riddle' | 'photo' | 'quiz' | 'checkpoint';
 

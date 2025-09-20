@@ -1,14 +1,14 @@
 import { Router } from 'express';
 import { z } from 'zod';
 
-import { requireAuth } from '../middleware/auth';
-import { wrap } from '../utils/wrap';
-import { Attempt } from '../models/Attempt';
-import { Story } from '../models/Story';
-import { Milestone } from '../models/Milestone';
-import { haversineM } from '../utils/geo';
-import { matchesAny } from '../utils/text';
-import { unlockAchievement } from '../services/achievement.service';
+import { requireAuth } from '../middleware/auth.js';
+import { wrap } from '../utils/wrap.js';
+import { Attempt } from '../models/Attempt.js';
+import { Story } from '../models/Story.js';
+import { Milestone } from '../models/Milestone.js';
+import { haversineM } from '../utils/geo.js';
+import { matchesAny } from '../utils/text.js';
+import { unlockAchievement } from '../services/achievement.service.js';
 
 export const attemptsRouter = Router();
 

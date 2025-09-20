@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { authLimiter } from '../middleware/rateLimiter';
-import { wrap } from '../utils/wrap';
+import { authLimiter } from '../middleware/rateLimiter.js';
+import { wrap } from '../utils/wrap.js';
 import {
   postRegister,
   postLogin,
@@ -10,7 +10,7 @@ import {
   postLogout,
   postForgotPassword,
   postResetPassword
-} from '../controllers/auth.controller';
+} from '../controllers/auth.controller.js';
 
 export const authRouter = Router();
 

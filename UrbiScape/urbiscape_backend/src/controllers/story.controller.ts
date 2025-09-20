@@ -1,10 +1,10 @@
 // src/controllers/story.controller.ts
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import { Story } from '../models/Story';
-import { Milestone } from '../models/Milestone';
-import { slugify } from '../utils/slug';
-import { isObjectId } from '../utils/objectId';
+import { Story } from '../models/Story.js';
+import { Milestone } from '../models/Milestone.js';
+import { slugify } from '../utils/slug.js';
+import { isObjectId } from '../utils/objectId.js';
 
 const storyBody = z.object({
   title: z.string(),

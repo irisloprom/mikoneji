@@ -1,17 +1,44 @@
+// src/index.ts
+import 'dotenv/config';
+import http from 'http';
+import mongoose from 'mongoose';
+
+import { app } from './app.js';
 import { env } from './config/env.js';
 import { connectDB } from './config/db.js';
-import { initFirebase } from './config/firebase.js';
-import { app } from './app.js';
 
-async function bootstrap() {
+async function boot() {
   await connectDB();
-  initFirebase();
-  app.listen(env.port, () => {
-    console.log(`🚀 EscapUrbis backend en http://localhost:${env.port}`);
+
+  const server = http.createServer(app);
+  server.listen(env.port, () => {
+    // eslint-disable-next-line no-console
+    console.log(`🚀 Server ready on http://localhost:${env.port} [${env.nodeEnv}]`);
   });
+
+  // — Graceful shutdown
+  const shutdown = async (signal: string) => {
+    // eslint-disable-next-line no-console
+    console.log(`\n🛑 Received ${signal}. Shutting down...`);
+    server.close(async () => {
+      try {
+        await mongoose.connection.close();
+        // eslint-disable-next-line no-console
+        console.log('🗄️  MongoDB disconnected');
+      } finally {
+        process.exit(0);
+      }
+    });
+    // Hard timeout in case something hangs
+    setTimeout(() => process.exit(1), 10_000).unref();
+  };
+
+  process.on('SIGINT', () => shutdown('SIGINT'));
+  process.on('SIGTERM', () => shutdown('SIGTERM'));
 }
 
-bootstrap().catch((e) => {
-  console.error(e);
+boot().catch((err) => {
+  // eslint-disable-next-line no-console
+  console.error('❌ Failed to start:', err);
   process.exit(1);
 });

@@ -2,10 +2,10 @@ import { Router } from 'express';
 import crypto from 'node:crypto';
 import { z } from 'zod';
 
-import { requireAuth } from '../middleware/auth';
-import { verifyLimiter } from '../middleware/rateLimiter'; // si tu export se llama distinto, ajusta
-import { wrap } from '../utils/wrap';
-import { cloudFolder } from '../config/cloudinary';
+import { requireAuth } from '../middleware/auth.js';
+import { verifyLimiter } from '../middleware/rateLimiter.js'; // si tu export se llama distinto, ajusta
+import { wrap } from '../utils/wrap.js';
+import { cloudFolder } from '../config/cloudinary.js';
 
 export const mediaRouter = Router();
 

@@ -1,13 +1,13 @@
 import { Router } from 'express';
-import { requireAuth, requireRole } from '../middleware/auth';
-import { wrap } from '../utils/wrap';
+import { requireAuth, requireRole } from '../middleware/auth.js';
+import { wrap } from '../utils/wrap.js';
 import {
   postMilestone,
   patchMilestone,
   deleteMilestone,
   postReorderMilestones,
   getMilestone
-} from '../controllers/milestone.controller';
+} from '../controllers/milestone.controller.js';
 
 export const milestoneRouter = Router();
 

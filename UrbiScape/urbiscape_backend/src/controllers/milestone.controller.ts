@@ -1,9 +1,9 @@
 // src/controllers/milestone.controller.ts
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import { Milestone } from '../models/Milestone';
-import { Story } from '../models/Story';
-import { isObjectId } from '../utils/objectId';
+import { Milestone } from '../models/Milestone.js';
+import { Story } from '../models/Story.js';
+import { isObjectId } from '../utils/objectId.js';
 
 const msBody = z.object({
   story: z.string(),

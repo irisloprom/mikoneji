@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import { Achievement } from '../../../models/Achievement';
-import { Story } from '../../../models/Story';
-import { isObjectId, toObjectId } from '../../../utils/objectId';
+import { Achievement } from '../../../models/Achievement.js';
+import { Story } from '../../../models/Story.js';
+import { isObjectId, toObjectId } from '../../../utils/objectId.js';
 
 async function resolveStoryId(idOrSlug?: string) {
   if (!idOrSlug) return undefined;

@@ -1,6 +1,6 @@
 // src/middleware/verifyFirebaseIdToken.ts
 import { Request, Response, NextFunction } from 'express';
-import { verifyFirebaseIdToken } from '../config/firebase';
+import { verifyFirebaseIdToken } from '../config/firebase.js';
 
 export async function verifyFirebaseIdTokenMw(req: Request, res: Response, next: NextFunction) {
   const header = req.headers.authorization;

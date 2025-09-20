@@ -1,6 +1,6 @@
 // src/middleware/auth.ts
 import { Request, Response, NextFunction } from 'express';
-import { verifyAccessToken } from '../utils/jwt';
+import { verifyAccessToken } from '../utils/jwt.js';
 
 type JwtUser = {
   sub: string;              // user id

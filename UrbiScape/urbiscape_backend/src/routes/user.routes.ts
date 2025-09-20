@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { requireAuth } from '../middleware/auth';
-import { wrap } from '../utils/wrap';
-import { getMe } from '../controllers/user.controller';
-import { getMyHistory } from '../controllers/users/me/history';
-import { getMyAchievements } from '../controllers/users/me/achievements';
+import { requireAuth } from '../middleware/auth.js';
+import { wrap } from '../utils/wrap.js';
+import { getMe } from '../controllers/user.controller.js';
+import { getMyHistory } from '../controllers/users/me/history.js';
+import { getMyAchievements } from '../controllers/users/me/achievements.js';
 
 export const userRouter = Router();
 

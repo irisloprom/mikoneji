@@ -1,11 +1,11 @@
 import { Router } from 'express';
-import { requireAuth, requireRole } from '../middleware/auth';
-import { wrap } from '../utils/wrap';
+import { requireAuth, requireRole } from '../middleware/auth.js';
+import { wrap } from '../utils/wrap.js';
 import {
   postStory, patchStory, getStories, getStory,
   postPublish, postUnpublish, postArchive, postDuplicate,
   getStoryMilestones
-} from '../controllers/story.controller';
+} from '../controllers/story.controller.js';
 
 export const storyRouter = Router();
 

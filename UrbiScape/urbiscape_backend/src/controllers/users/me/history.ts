@@ -1,9 +1,9 @@
 // src/controllers/users/me/history.ts
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import { Attempt } from '../../../models/Attempt';
-import { Story } from '../../../models/Story';
-import { isObjectId, toObjectId } from '../../../utils/objectId';
+import { Attempt } from '../../../models/Attempt.js';
+import { Story } from '../../../models/Story.js';
+import { isObjectId, toObjectId } from '../../../utils/objectId.js';
 
 async function resolveStoryId(idOrSlug?: string) {
   if (!idOrSlug) return undefined;
