@@ -1,9 +1,12 @@
+// src/utils/password.ts
 import bcrypt from 'bcrypt';
 
+const ROUNDS = 12; // si quieres, permite override con env
+
 export async function hashPassword(plain: string) {
-  const saltRounds = 12;
-  return bcrypt.hash(plain, saltRounds);
+  return bcrypt.hash(plain, ROUNDS);
 }
+
 export async function verifyPassword(plain: string, hash: string) {
   return bcrypt.compare(plain, hash);
 }
