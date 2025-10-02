@@ -1,0 +1,152 @@
+{
+  "title": "Aventura de Prueba — El beso de Judas",
+  "slug": "aventura-de-prueba-beso-de-judas",
+  "summary": "Aventura de prueba jugable desde casa: descubre la ‘magia del 33’, los cuadrados mágicos y la leyenda del Beso de Judas.",
+  "theme": "history",
+  "neighborhood": "Sagrada Família (virtual)",
+  "coverImageUrl": "https://example.com/covers/beso-judas.jpg",
+  "durationMinutes": 15,
+  "tags": ["tutorial", "prueba", "desde casa"],
+  "status": "published",
+  "publishedAt": "2025-09-01T00:00:00.000Z",
+  "milestones": [
+    {
+      "order": 0,
+      "type": "narrative",
+      "title": "Introducción",
+      "description": "En una de las fachadas de la Sagrada Família hay una estatua con un ‘cuadro mágico’. Se dice que si dos personas enamoradas se besan bajo esa estatua, su amor durará para siempre. Yo no sé mucho de amor, pero sí sé por qué a ese cuadro se le llama mágico. ¡Vamos a descubrirlo!"
+    },
+
+    {
+      "order": 1,
+      "type": "riddle",
+      "title": "Enigma 1 — Primera fila",
+      "description": "Para empezar con la magia, vamos con una pequeña suma. ¿Cuál es el resultado de la suma de todos los números de la primera fila del cuadrado?",
+      "riddle": {
+        "question": "Suma de la primera fila",
+        "acceptedAnswers": ["33", "treinta y tres"],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: Fíjate solo en la primera línea horizontal y súmalos uno a uno.",
+        "Fácil: Los números son 1, 14, 14 y 4.",
+        "Solución: 33."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 2,
+      "type": "narrative",
+      "title": "Recompensa 1",
+      "description": "¡Así es! 33 es un número muy especial en la tradición cristiana: Jesús murió a los 33 años. El método de ejecución fue la crucifixión, una pena brutal y pública. Sigamos con la magia de los números."
+    },
+
+    {
+      "order": 3,
+      "type": "riddle",
+      "title": "Enigma 2 — Segunda fila (voz o texto)",
+      "description": "Di (o escribe) el resultado de la suma de los números de la segunda fila.",
+      "riddle": {
+        "question": "Suma de la segunda fila",
+        "acceptedAnswers": ["33", "treinta y tres"],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: Misma operación que antes, ahora en la segunda línea.",
+        "Fácil: Suma 11, 7, 6 y 9.",
+        "Solución: 33."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 4,
+      "type": "narrative",
+      "title": "Recompensa 2",
+      "description": "¡Efectivamente, también 33! En este cuadrado, todas las filas suman 33. Algunos lo relacionan con pasajes y simbolismos religiosos. Sigamos descubriendo la magia."
+    },
+
+    {
+      "order": 5,
+      "type": "quiz",
+      "title": "Enigma 3 — ¿Y las columnas?",
+      "description": "Selecciona la respuesta correcta: ¿qué número da la suma de los números de una misma columna?",
+      "riddle": {
+        "question": "Suma de una columna",
+        "acceptedAnswers": ["33", "d", "D"],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: Si las filas dan 33 y es un ‘cuadrado mágico’…",
+        "Fácil: No necesitas sumar: filas y columnas dan lo mismo.",
+        "Solución: 33."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 6,
+      "type": "narrative",
+      "title": "Recompensa 3",
+      "description": "¡Exacto! También las columnas (y las diagonales) dan 33. Este es un tipo de ‘Cuadrado Mágico’. El más antiguo conocido es el Lo Shu, de la China antigua."
+    },
+
+    {
+      "order": 7,
+      "type": "riddle",
+      "title": "Enigma 4 — Casilla faltante",
+      "description": "¿Puedes completar el cuadrado mágico? ¿Qué número falta en la casilla vacía para que la suma sea 33?",
+      "riddle": {
+        "question": "Número faltante",
+        "acceptedAnswers": ["7"],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: Fíjate en la fila o columna donde está la casilla vacía.",
+        "Fácil: 10 + 11 + 5 = 26; ¿qué falta para llegar a 33?",
+        "Solución: 7."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 8,
+      "type": "narrative",
+      "title": "Recompensa 4",
+      "description": "¡Correcto! Aquí los números se repiten: a estos se les llama “Cuadrados Mágicos con Repetición” (o semánticos). Falta la última pieza de la historia…"
+    },
+
+    {
+      "order": 9,
+      "type": "quiz",
+      "title": "Enigma 5 — El beso de traición",
+      "description": "En la escultura hay dos personas: una es Jesús y la otra su traidor. ¿Cómo se llama?",
+      "riddle": {
+        "question": "¿Quién traicionó a Jesús con un beso?",
+        "acceptedAnswers": ["judas", "Judas", "d", "D"],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: “Un beso de …” se usa para hablar de una traición.",
+        "Fácil: El título ‘El Beso de …’ te da la respuesta.",
+        "Solución: Judas."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 10,
+      "type": "narrative",
+      "title": "Recompensa 5",
+      "description": "Exacto, Judas. Su beso de traición entregó a Jesús por 30 monedas de plata. Un gesto con doble cara, como vemos también en la cultura popular (p. ej., en ‘El Padrino’)."
+    },
+
+    {
+      "order": 11,
+      "type": "narrative",
+      "title": "Recompensa Final",
+      "description": "¡Hemos desvelado la magia del 33! Cuadrados mágicos, simbolismo religioso y la leyenda del beso de Judas se entrelazan en esta aventura de prueba. ¿Listx para explorar la ciudad de verdad?"
+    }
+  ]
+}
