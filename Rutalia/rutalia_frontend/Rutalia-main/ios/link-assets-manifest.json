@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/AwesomeSerif-BoldRegular.otf",
+      "sha1": "11852a810941d6b6e9a69c4cee9827930f6bef1d"
+    },
+    {
+      "path": "src/assets/fonts/Handlee-Regular.ttf",
+      "sha1": "7bfbcc74e78e521eac4dba8f33817675f9b1340c"
+    },
+    {
+      "path": "src/assets/fonts/__MACOSX/Awesome Serif Desktop Fonts/._.DS_Store",
+      "sha1": "0bed7e90c2bade9763fa18f1fb4441d31f91c87c"
+    }
+  ]
+}
