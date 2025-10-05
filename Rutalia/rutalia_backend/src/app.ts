@@ -17,6 +17,7 @@ import { milestoneRouter } from './routes/milestone.routes.js';
 import { userRouter } from './routes/user.routes.js';
 import { attemptsRouter } from './routes/attempts.routes.js';
 import { mediaRouter } from './routes/media.routes.js';
+import { healthRouter } from './routes/health.routes.js';
 
 export const app = express();
 
@@ -58,6 +59,7 @@ app.use('/milestones', milestoneRouter);
 app.use('/users', userRouter);
 app.use('/attempts', attemptsRouter);
 app.use('/media', mediaRouter);
+app.use('/health', healthRouter);
 
 // ——— 404
 app.use((_req, res) => {

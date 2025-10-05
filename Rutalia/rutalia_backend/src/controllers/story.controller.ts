@@ -1,4 +1,3 @@
-// src/controllers/story.controller.ts
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { Story } from '../models/Story.js';
@@ -74,7 +73,44 @@ export async function getStory(req: Request, res: Response) {
   res.json(story);
 }
 
-// POST /stories
+/* -------------------------------------------------------------------------- */
+/*                              NUEVO ENDPOINT                                */
+/* -------------------------------------------------------------------------- */
+// GET /stories/:idOrSlug/full
+export async function getStoryFull(req: Request, res: Response) {
+  const idOrSlug = (req.params as any).idOrSlug ?? req.params.id;
+  const query = isObjectId(idOrSlug) ? { _id: idOrSlug } : { slug: idOrSlug };
+  const story = await Story.findOne(query);
+  if (!story) return res.status(404).json({ error: 'Historia no encontrada' });
+
+  const isEditor = ['admin','editor'].includes(req.user?.role || '');
+  if (!isEditor && story.status !== 'published') {
+    return res.status(403).json({ error: 'No disponible' });
+  }
+
+  const milestones = await Milestone.find({ story: story._id })
+    .sort({ order: 1 })
+    .select({
+      order: 1,
+      type: 1,
+      clue: 1,
+      points: 1,
+      proximityRadiusM: 1,
+      'location.coordinates': 1,
+      'riddle.prompt': 1,
+    })
+    .lean();
+
+  res.json({
+    story,
+    milestones,
+  });
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                RESTO IGUAL                                 */
+/* -------------------------------------------------------------------------- */
+
 export async function postStory(req: Request, res: Response) {
   const body = storyBody.parse(req.body);
   const slug = body.slug?.trim() || slugify(body.title);
@@ -91,7 +127,6 @@ export async function postStory(req: Request, res: Response) {
   res.status(201).json(story);
 }
 
-// PATCH /stories/:id
 export async function patchStory(req: Request, res: Response) {
   const id = req.params.id;
   const body = storyBody.partial().parse(req.body);
@@ -105,7 +140,6 @@ export async function patchStory(req: Request, res: Response) {
   res.json(story);
 }
 
-// POST /stories/:id/publish
 export async function postPublish(req: Request, res: Response) {
   const id = req.params.id;
   const s = await Story.findById(id);
@@ -116,7 +150,6 @@ export async function postPublish(req: Request, res: Response) {
   res.json(s);
 }
 
-// POST /stories/:id/unpublish
 export async function postUnpublish(req: Request, res: Response) {
   const id = req.params.id;
   const s = await Story.findById(id);
@@ -126,7 +159,6 @@ export async function postUnpublish(req: Request, res: Response) {
   res.json(s);
 }
 
-// POST /stories/:id/archive
 export async function postArchive(req: Request, res: Response) {
   const id = req.params.id;
   const s = await Story.findById(id);
@@ -136,7 +168,6 @@ export async function postArchive(req: Request, res: Response) {
   res.json(s);
 }
 
-// POST /stories/:id/duplicate
 export async function postDuplicate(req: Request, res: Response) {
   const id = req.params.id;
   const s = await Story.findById(id);
@@ -162,7 +193,6 @@ export async function postDuplicate(req: Request, res: Response) {
   res.status(201).json(newStory);
 }
 
-// GET /stories/:id/milestones
 export async function getStoryMilestones(req: Request, res: Response) {
   const storyId = req.params.id;
   const story = await Story.findById(storyId);

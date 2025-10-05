@@ -9,10 +9,11 @@ import { Milestone } from '../models/Milestone.js';
 import { haversineM } from '../utils/geo.js';
 import { matchesAny } from '../utils/text.js';
 import { unlockAchievement } from '../services/achievement.service.js';
+import { submitAttemptLimiter } from '../middleware/rateLimiter.js'; // ⬅️ rate-limit para /submit
 
 export const attemptsRouter = Router();
 
-// Schemas
+/* ------------------------------- Schemas ------------------------------- */
 const startSchema = z.object({
   storyId: z.string().min(1)
 });
@@ -24,7 +25,30 @@ const submitSchema = z.object({
   okOverride: z.boolean().optional()
 });
 
-// POST /attempts/start  { storyId }
+const activeQuerySchema = z.object({
+  story: z.string().min(1).optional(), // id o slug
+});
+
+/* ------------------------- GET /attempts/active ------------------------ */
+/** Devuelve el intento no finalizado más reciente del usuario.
+ *  Soporta ?story=<id|slug> para reanudar una historia concreta.
+ */
+attemptsRouter.get('/active', requireAuth, wrap(async (req, res) => {
+  const { story } = activeQuerySchema.parse(req.query);
+
+  const filter: any = { user: req.user!.sub, finishedAt: { $exists: false } };
+
+  if (story) {
+    const s = await Story.findOne({ $or: [{ _id: story }, { slug: story }] }, { _id: 1 }).lean();
+    if (!s) return res.status(404).json({ error: 'Historia no encontrada' });
+    filter.story = s._id;
+  }
+
+  const attempt = await Attempt.findOne(filter).sort({ createdAt: -1 }).lean();
+  return res.json({ attempt: attempt || null });
+}));
+
+/* --------------------------- POST /attempts/start ---------------------- */
 attemptsRouter.post('/start', requireAuth, wrap(async (req, res) => {
   const { storyId } = startSchema.parse(req.body);
 
@@ -40,6 +64,10 @@ attemptsRouter.post('/start', requireAuth, wrap(async (req, res) => {
     status: 'pending' as const,
   }));
 
+  // (opcional) si hay intento activo para esta historia, reutilizarlo:
+  // const existing = await Attempt.findOne({ user: req.user!.sub, story: story._id, finishedAt: { $exists: false } });
+  // if (existing) return res.status(200).json(existing);
+
   const attempt = await Attempt.create({
     user: req.user!.sub,
     story: story._id,
@@ -50,7 +78,7 @@ attemptsRouter.post('/start', requireAuth, wrap(async (req, res) => {
   res.status(201).json(attempt);
 }));
 
-// GET /attempts/:id  (estado completo)
+/* ------------------------------ GET /:id ------------------------------- */
 attemptsRouter.get('/:id', requireAuth, wrap(async (req, res) => {
   const a = await Attempt.findById(req.params.id).populate('story');
   if (!a) return res.status(404).json({ error: 'Intento no encontrado' });
@@ -58,20 +86,22 @@ attemptsRouter.get('/:id', requireAuth, wrap(async (req, res) => {
   res.json(a);
 }));
 
-/**
- * POST /attempts/:id/submit
- * body:
- *  - answerText?: string
- *  - lat?: number
- *  - lng?: number
- *  - okOverride?: boolean   // si ya validaste foto/voz en otro endpoint y traes el resultado
+/* --------------------------- POST /:id/submit -------------------------- */
+/** Valida el paso actual del intento:
+ *  - type "location": requiere lat/lng y valida distancia <= proximityRadiusM
+ *  - type "riddle": compara answerText con acceptedAnswers
+ *  - okOverride: permite validar previamente (foto/voz) en otro endpoint
  */
-attemptsRouter.post('/:id/submit', requireAuth, wrap(async (req, res) => {
+attemptsRouter.post('/:id/submit', requireAuth, submitAttemptLimiter, wrap(async (req, res) => {
   const { answerText, lat, lng, okOverride } = submitSchema.parse(req.body);
 
   const a = await Attempt.findById(req.params.id);
   if (!a) return res.status(404).json({ error: 'Intento no encontrado' });
   if (String(a.user) !== String(req.user!.sub)) return res.status(403).json({ error: 'No permitido' });
+
+  if (a.finishedAt) {
+    return res.status(200).json({ ok: true, finished: true, attempt: a });
+  }
 
   const step = a.steps.find((s) => s.order === a.currentOrder);
   if (!step) return res.status(400).json({ error: 'No hay paso actual' });
@@ -80,7 +110,7 @@ attemptsRouter.post('/:id/submit', requireAuth, wrap(async (req, res) => {
   const m = await Milestone.findById(step.milestone);
   if (!m) return res.status(404).json({ error: 'Hito no encontrado' });
 
-  // 1) GPS (obligatorio si el tipo es "location", opcional en otros si envías lat/lng)
+  // 1) Validación GPS si el hito tiene ubicación
   if (m.location?.coordinates) {
     if (m.type === 'location' && (typeof lat !== 'number' || typeof lng !== 'number')) {
       return res.status(400).json({ error: 'Se requiere ubicación para este hito' });
@@ -101,15 +131,15 @@ attemptsRouter.post('/:id/submit', requireAuth, wrap(async (req, res) => {
   let ok = true;
 
   if (typeof okOverride === 'boolean') {
-    ok = okOverride; // ya verificado (foto/voz) en otro endpoint
+    ok = okOverride; // resultado ya verificado en otro endpoint
   } else if (m.riddle?.acceptedAnswers?.length) {
     if (!answerText) return res.status(400).json({ error: 'Falta answerText' });
     ok = matchesAny(answerText, m.riddle.acceptedAnswers);
   } else {
-    ok = true; // si no hay acceptedAnswers ni override, estar en zona basta
+    ok = true; // sin acertijo ni override → estar en zona basta
   }
 
-  // Guardamos el resultado del paso
+  // Guardar resultado del paso
   step.status = ok ? 'passed' : 'failed';
   step.answerText = answerText;
   step.at = new Date();
@@ -122,7 +152,7 @@ attemptsRouter.post('/:id/submit', requireAuth, wrap(async (req, res) => {
 
     const remaining = a.steps.length - a.currentOrder;
     if (remaining <= 0) {
-      // FIN DE HISTORIA
+      // fin de historia
       a.finishedAt = new Date();
       await a.save();
 
@@ -142,7 +172,7 @@ attemptsRouter.post('/:id/submit', requireAuth, wrap(async (req, res) => {
   res.json({ ok, attempt: a });
 }));
 
-// POST /attempts/:id/hint  (descuento de puntos)
+/* --------------------------- POST /:id/hint ---------------------------- */
 attemptsRouter.post('/:id/hint', requireAuth, wrap(async (req, res) => {
   const a = await Attempt.findById(req.params.id);
   if (!a) return res.status(404).json({ error: 'Intento no encontrado' });
@@ -161,7 +191,7 @@ attemptsRouter.post('/:id/hint', requireAuth, wrap(async (req, res) => {
   res.json({ ok: true, penalty, score: a.score });
 }));
 
-// GET /attempts/:id/summary
+/* --------------------------- GET /:id/summary -------------------------- */
 attemptsRouter.get('/:id/summary', requireAuth, wrap(async (req, res) => {
   const a = await Attempt.findById(req.params.id).populate('story');
   if (!a) return res.status(404).json({ error: 'Intento no encontrado' });
