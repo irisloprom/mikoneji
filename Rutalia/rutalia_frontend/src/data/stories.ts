@@ -20,7 +20,7 @@ export const STORIES: Story[] = [
     enigmas: 5,
     tag: 'Histórico',
     description:
-      'En unas de las fachadas de la sagrada familia hay una estatua con un cuadro mágico al lado. La estatua representa a Judas, seguidor de Jesús, pero la leyenda que envuelve a la escultura es mucho más romántica.\n\nSe dice que si dos personas enamoradas se besan debajo de esa estatua, su amor durará para siempre.\n\nYo no sé mucho de amor, pero sí sé por qué a ese cuadro se le llama mágico.\n¡Vamos a descubrirlo!',
+      'En unas de las fachadas de la sagrada familia hay una estatua con un cuadro mágico al lado. La estatua representa a Judas, seguidor de Jesús, pero la leyenda que envuelve a la escultura es mucho más romántica.\n\nSe dice que si dos personas enamoradas se besan debajo de esa estatua, su amor durará para siempre.\n\nYo no sé mucho de amor, pero sí sé por qué a ese cuadro se le llama mágico.\n\n¡Vamos a descubrirlo!',
     image: require('../assets/images/beso-judas-inicio.png'),
     footerImage: require('../assets/images/eulalia-cola.png'),
     firstEnigmaId: 'judas1',

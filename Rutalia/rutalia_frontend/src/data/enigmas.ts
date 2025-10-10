@@ -83,7 +83,7 @@ export const ENIGMAS: Enigma[] = [
     order: 5,
     totalEnigmas: 5,
     storyTitle: 'El beso de Judas',
-    image: require('../assets/images/beso-traicion.png'),
+    image: require('../assets/images/judas-recompensa-5.png'),
     introText: 'El amor... ¡Qué bonito es! O eso me han dicho. Dicen que del amor al odio hay solo un paso o que existen besos envenenados. En esta escultura hay representadas dos personas, una de ellas es Jesús, mientras que la persona que le da el beso es su traidor.',
     question: '¿Sabrías cuál es su nombre?',
     inputType: 'multipleChoice',

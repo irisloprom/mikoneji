@@ -11,7 +11,7 @@ const MapaBarrioScreen = ({ navigation }: MapaBarrioScreenProps) => {
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image source={require('../assets/images/boton-arrow-left.png')} style={styles.backIcon} />
         </TouchableOpacity>
-        <Text style={globalStyles.titleXXL}>MAPA</Text>
+        <Text style={globalStyles.screenTitle}>MAPA</Text>
         <View style={styles.headerPlaceholder} />
       </View>
       <View style={styles.content} />

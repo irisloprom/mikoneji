@@ -14,6 +14,10 @@
 		BA4DFAFB8EC24164B56F4309 /* AwesomeSerif-BoldRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0C790F06A24C798DB6751D /* AwesomeSerif-BoldRegular.otf */; };
 		BBE6A486732241A4AC40667B /* ._.DS_Store in Resources */ = {isa = PBXBuildFile; fileRef = E6D21116FD154BB382062DCD /* ._.DS_Store */; };
 		BED6F8FA501047B2A4D05CD2 /* Handlee-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 825712CCD0AE4D3E983D5676 /* Handlee-Regular.ttf */; };
+		9B3CE6BC3B074A84A77118F2 /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07E405CB6DE84FBBB3273560 /* Inter-Regular.otf */; };
+		A1D7CC9A7E7C49C2BA09DABD /* Satoshi-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F957863BCFCE47A0A8FA7F96 /* Satoshi-Regular.otf */; };
+		DF9CFE6A4B17474D94C4DE64 /* TTHovesProTrial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C6A6FFDBE974593ABB8143E /* TTHovesProTrial-Regular.ttf */; };
+		4193F48A8B9D4027907CF4EC /* Barlow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E6D01AFB17B436F8E1681FA /* Barlow-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		5D0C790F06A24C798DB6751D /* AwesomeSerif-BoldRegular.otf */ = {isa = PBXFileReference; name = "AwesomeSerif-BoldRegular.otf"; path = "../src/assets/fonts/AwesomeSerif-BoldRegular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		E6D21116FD154BB382062DCD /* ._.DS_Store */ = {isa = PBXFileReference; name = "._.DS_Store"; path = "../src/assets/fonts/__MACOSX/Awesome Serif Desktop Fonts/._.DS_Store"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		825712CCD0AE4D3E983D5676 /* Handlee-Regular.ttf */ = {isa = PBXFileReference; name = "Handlee-Regular.ttf"; path = "../src/assets/fonts/Handlee-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		07E405CB6DE84FBBB3273560 /* Inter-Regular.otf */ = {isa = PBXFileReference; name = "Inter-Regular.otf"; path = "../src/assets/fonts/Inter-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F957863BCFCE47A0A8FA7F96 /* Satoshi-Regular.otf */ = {isa = PBXFileReference; name = "Satoshi-Regular.otf"; path = "../src/assets/fonts/Satoshi-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1C6A6FFDBE974593ABB8143E /* TTHovesProTrial-Regular.ttf */ = {isa = PBXFileReference; name = "TTHovesProTrial-Regular.ttf"; path = "../src/assets/fonts/TTHovesProTrial-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7E6D01AFB17B436F8E1681FA /* Barlow-Regular.ttf */ = {isa = PBXFileReference; name = "Barlow-Regular.ttf"; path = "../src/assets/fonts/Barlow-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,10 @@
 				5D0C790F06A24C798DB6751D /* AwesomeSerif-BoldRegular.otf */,
 				E6D21116FD154BB382062DCD /* ._.DS_Store */,
 				825712CCD0AE4D3E983D5676 /* Handlee-Regular.ttf */,
+				07E405CB6DE84FBBB3273560 /* Inter-Regular.otf */,
+				F957863BCFCE47A0A8FA7F96 /* Satoshi-Regular.otf */,
+				1C6A6FFDBE974593ABB8143E /* TTHovesProTrial-Regular.ttf */,
+				7E6D01AFB17B436F8E1681FA /* Barlow-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -180,6 +192,10 @@
 				BA4DFAFB8EC24164B56F4309 /* AwesomeSerif-BoldRegular.otf in Resources */,
 				BBE6A486732241A4AC40667B /* ._.DS_Store in Resources */,
 				BED6F8FA501047B2A4D05CD2 /* Handlee-Regular.ttf in Resources */,
+				9B3CE6BC3B074A84A77118F2 /* Inter-Regular.otf in Resources */,
+				A1D7CC9A7E7C49C2BA09DABD /* Satoshi-Regular.otf in Resources */,
+				DF9CFE6A4B17474D94C4DE64 /* TTHovesProTrial-Regular.ttf in Resources */,
+				4193F48A8B9D4027907CF4EC /* Barlow-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

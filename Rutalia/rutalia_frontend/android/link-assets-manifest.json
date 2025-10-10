@@ -6,8 +6,24 @@
       "sha1": "11852a810941d6b6e9a69c4cee9827930f6bef1d"
     },
     {
+      "path": "src/assets/fonts/Barlow-Regular.ttf",
+      "sha1": "7426e387aea19b486a47f15869a3a8328fac0058"
+    },
+    {
       "path": "src/assets/fonts/Handlee-Regular.ttf",
       "sha1": "7bfbcc74e78e521eac4dba8f33817675f9b1340c"
+    },
+    {
+      "path": "src/assets/fonts/Inter-Regular.otf",
+      "sha1": "ee5c2e22ffeddefc433c9aa4c76779bb73a5c682"
+    },
+    {
+      "path": "src/assets/fonts/Satoshi-Regular.otf",
+      "sha1": "7dcb59994f2bee1a4ef1f6c079ba0e99b409878b"
+    },
+    {
+      "path": "src/assets/fonts/TTHovesProTrial-Regular.ttf",
+      "sha1": "4977e8017e1c490f7455aa5f70fd56825a972e1d"
     },
     {
       "path": "src/assets/fonts/__MACOSX/Awesome Serif Desktop Fonts/._.DS_Store",

@@ -51,6 +51,10 @@
 	<array>
 		<string>AwesomeSerif-BoldRegular.otf</string>
 		<string>Handlee-Regular.ttf</string>
+		<string>Inter-Regular.otf</string>
+		<string>Satoshi-Regular.otf</string>
+		<string>TTHovesProTrial-Regular.ttf</string>
+		<string>Barlow-Regular.ttf</string>
 	</array>
 </dict>
 </plist>

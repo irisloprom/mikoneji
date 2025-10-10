@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     gap: 50,
   },
   title: {
-    ...globalStyles.rutaliaHeader,
+    ...globalStyles.headerTitle,
     textAlign: 'center',
     letterSpacing: 1.6,
     width: 276,

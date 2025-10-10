@@ -1,123 +1,54 @@
-import { StyleSheet } from 'react-native';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
+import type { CompositeScreenProps } from '@react-navigation/native';
 
-export const COLORS = {
-  background: '#FFFBF4',
-  primaryRed: '#C0392B',
-  primaryBlue: '#30606E',
-  tagOrange: '#CA6935',
-  textDark: '#1E1E1E',
-  textLight: '#FFFFFF',
-  textMuted: 'rgba(30, 30, 30, 0.5)',
-  dotActive: 'rgba(30, 30, 30, 0.4)',
-  dotInactive: 'rgba(30, 30, 30, 0.1)',
-  placeholder: '#EFEFEF',
-  divider: 'rgba(202, 105, 53, 0.5)',
+export type RootStackParamList = {
+  Splash: undefined;
+  Walkthrough: undefined;
+  Auth: undefined;
+  SignUp: undefined;
+  Login: undefined;
+  ForgotPassword: undefined;
+  ResetPassword: undefined;
+  Verification: { email: string };
+  CameraPermission: undefined;
+  LocationPermission: undefined;
+  MicrophonePermission: undefined;
+  Main: undefined;
+  StoryDetail: { storyId: number };
+  Enigma: { enigmaId: string };
+  Reward: { rewardId: string };
+  FinalReward: { storyId: number };
 };
 
-export const FONTS = {
-  title: 'AwesomeSerif-BoldRegular',
-  body: 'TT Hoves Pro Trial Variable',
-  handwritten: 'Handlee-Regular',
+export type TabParamList = {
+  MapaTab: undefined;
+  Inicio: undefined;
+  Perfil: undefined;
 };
 
-export const SIZES = {
-  titleXXL: 32,
-  titleXL: 24,
-  body: 18,
-  caption: 16,
-};
+export type SplashScreenProps = NativeStackScreenProps<RootStackParamList, 'Splash'>;
+export type WalkthroughScreenProps = NativeStackScreenProps<RootStackParamList, 'Walkthrough'>;
+export type AuthScreenProps = NativeStackScreenProps<RootStackParamList, 'Auth'>;
+export type SignUpScreenProps = NativeStackScreenProps<RootStackParamList, 'SignUp'>;
+export type LoginScreenProps = NativeStackScreenProps<RootStackParamList, 'Login'>;
+export type ForgotPasswordScreenProps = NativeStackScreenProps<RootStackParamList, 'ForgotPassword'>;
+export type ResetPasswordScreenProps = NativeStackScreenProps<RootStackParamList, 'ResetPassword'>;
+export type VerificationScreenProps = NativeStackScreenProps<RootStackParamList, 'Verification'>;
+export type CameraPermissionScreenProps = NativeStackScreenProps<RootStackParamList, 'CameraPermission'>;
+export type LocationPermissionScreenProps = NativeStackScreenProps<RootStackParamList, 'LocationPermission'>;
+export type MicrophonePermissionScreenProps = NativeStackScreenProps<RootStackParamList, 'MicrophonePermission'>;
+export type StoryDetailScreenProps = NativeStackScreenProps<RootStackParamList, 'StoryDetail'>;
+export type EnigmaScreenProps = NativeStackScreenProps<RootStackParamList, 'Enigma'>;
+export type RewardScreenProps = NativeStackScreenProps<RootStackParamList, 'Reward'>;
+export type FinalRewardScreenProps = NativeStackScreenProps<RootStackParamList, 'FinalReward'>;
 
-export const globalStyles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.background,
-  },
-  rutaliaHeader: {
-    fontFamily: FONTS.title,
-    fontSize: SIZES.titleXXL,
-    color: COLORS.textDark,
-  },
-  titleXL: {
-    fontFamily: FONTS.title,
-    fontSize: SIZES.titleXL,
-    fontWeight: '700',
-    color: COLORS.textDark,
-    textAlign: 'center',
-  },
-  bodyText: {
-    fontFamily: FONTS.body,
-    fontSize: SIZES.body,
-    color: COLORS.textDark,
-    textAlign: 'center',
-    lineHeight: 25,
-  },
-  captionText: {
-    fontFamily: FONTS.body,
-    fontSize: SIZES.caption,
-    color: COLORS.textDark,
-  },
-  handwrittenTitle: {
-    fontFamily: FONTS.handwritten,
-    fontSize: SIZES.titleXL,
-    fontWeight: '400',
-    color: COLORS.textDark,
-    textAlign: 'center',
-  },
-  handwrittenText: {
-    fontFamily: FONTS.handwritten,
-    fontSize: SIZES.body,
-    fontWeight: '400',
-    color: COLORS.textDark,
-    textAlign: 'center',
-  },
-  primaryButton: {
-    backgroundColor: COLORS.primaryBlue,
-    paddingVertical: 16,
-    paddingHorizontal: 32,
-    borderRadius: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  primaryButtonText: {
-    fontFamily: FONTS.body,
-    fontSize: SIZES.body,
-    color: COLORS.textLight,
-    fontWeight: 'bold',
-  },
-});
+export type HomeScreenProps = CompositeScreenProps<
+  BottomTabScreenProps<TabParamList, 'Inicio'>,
+  NativeStackScreenProps<RootStackParamList>
+>;
 
-export const walkthroughStyles = StyleSheet.create({
-  screen: {
-    ...globalStyles.container,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  image: {
-    width: '100%',
-    height: 250,
-    resizeMode: 'contain',
-  },
-  textContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  subtitle: {
-    ...globalStyles.bodyText,
-    marginTop: 16,
-  },
-  paginationContainer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: 10,
-    width: 70,
-    height: 30,
-  },
-  dot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: COLORS.dotInactive,
-  },
-});
+export type MapaBarrioScreenProps = CompositeScreenProps<
+  BottomTabScreenProps<TabParamList, 'MapaTab'>,
+  NativeStackScreenProps<RootStackParamList>
+>;
