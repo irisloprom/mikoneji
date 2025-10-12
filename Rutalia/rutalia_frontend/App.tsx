@@ -20,12 +20,14 @@ import FinalRewardScreen from './src/screens/FinalRewardScreen';
 import TabNavigator from './src/navigation/TabNavigator';
 
 import { RootStackParamList } from './src/navigation/types';
+import { NavigationProvider } from './src/context/NavigationContext';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const App = () => {
   return (
-    <NavigationContainer>
+    <NavigationProvider>
+      <NavigationContainer>
       <Stack.Navigator initialRouteName="Splash">
         <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Walkthrough" component={WalkthroughScreen} options={{ headerShown: false }} />
@@ -44,7 +46,8 @@ const App = () => {
         <Stack.Screen name="Reward" component={RewardScreen} options={{ headerShown: false }} />
         <Stack.Screen name="FinalReward" component={FinalRewardScreen} options={{ headerShown: false }} />
       </Stack.Navigator>
-    </NavigationContainer>
+      </NavigationContainer>
+    </NavigationProvider>
   );
 };
 
