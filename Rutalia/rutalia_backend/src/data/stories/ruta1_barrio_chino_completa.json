@@ -1,0 +1,281 @@
+{
+  "title": "La doble cara del Barrio Chino",
+  "slug": "la-doble-cara-del-barrio-chino",
+  "summary": "Recorre la historia desconocida del Raval a través de los ojos de un cronista de los años 20: desde el torno de expósitos hasta el Hada Verde del Bar Marsella.",
+  "theme": "history",
+  "neighborhood": "El Raval",
+  "coverImageUrl": "https://example.com/covers/ruta1.jpg",
+  "durationMinutes": 50,
+  "tags": [
+    "barcelona",
+    "raval",
+    "historia",
+    "cronista"
+  ],
+  "status": "published",
+  "publishedAt": "2025-09-01T00:00:00.000Z",
+  "milestones": [
+    {
+      "order": 0,
+      "type": "narrative",
+      "title": "Introducción",
+      "description": "He encontrado las páginas perdidas de la libreta de un ingenioso cronista de los años 20. Su misión era escribir la 'otra' historia de Barcelona, la que no aparecía en las postales. Quería revelar la fascinante 'doble cara' del Barrio Chino: un lugar lleno de vida, contrastes y secretos asombrosos. ¿Me ayudáis a seguir su rastro y completar su crónica? ¡Vamos a sacar a la luz el legado que nos dejó! Nuestra primera parada está muy cerca, dirígete a la Plaça de Vicenç Martorell."
+    },
+    {
+      "order": 1,
+      "type": "riddle",
+      "title": "Enigma 1.1 — El Mecanismo Silencioso",
+      "description": "¿Cuál es el apellido del escritor que da nombre a la plaza donde se encuentra nuestro objetivo?",
+      "riddle": {
+        "question": "Apellido del escritor",
+        "acceptedAnswers": [
+          "martorell",
+          "Martorell"
+        ],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: Es el autor de la famosa novela caballeresca 'Tirant lo Blanc'.",
+        "Fácil: El nombre de la plaza es Vicent ******.",
+        "Solución: MARTORELL."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 2,
+      "type": "gps",
+      "title": "Enigma 1.2 — Encuentra el torno",
+      "description": "Busca el 'mecanismo silencioso' del que hablaba la crónica. Activa tu GPS y colócate frente al torno de madera junto al número 17.",
+      "riddle": {
+        "question": "Ubicación GPS junto al número 17",
+        "acceptedAnswers": [
+          "17"
+        ],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: No es un edificio, sino un vestigio de madera incrustado en una pared de piedra. Es fácil pasarlo por alto.",
+        "Fácil: Busca la entrada a la Biblioteca Andreu Nin. El torno está en la pared, junto al portal número 17.",
+        "Solución: Colocarte frente al torno de madera en la pared junto al número 17."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 3,
+      "type": "narrative",
+      "title": "Recompensa 1",
+      "description": "¡Eso es, estáis en el lugar exacto! Este torno giratorio es un testigo mudo de incontables historias. Permitía a las madres dejar a sus bebés al cuidado de las monjas de forma anónima. Era un acto de amor y desesperación que salvó muchas vidas."
+    },
+    {
+      "order": 4,
+      "type": "riddle",
+      "title": "Enigma 3.1 — Estilo del monasterio",
+      "description": "Has llegado al Monasterio de Sant Pau del Camp. Este lugar es único: se trata de uno de los templos más antiguos de Barcelona. Escribe el nombre de su estilo arquitectónico.",
+      "riddle": {
+        "question": "¿Cuál es el estilo arquitectónico del monasterio?",
+        "acceptedAnswers": [
+          "románico",
+          "romanico"
+        ],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: Sus arcos son de medio punto y sus muros muy gruesos.",
+        "Fácil: Es anterior al gótico y conserva un claustro pequeño y sobrio.",
+        "Solución: La respuesta es Románico."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 5,
+      "type": "quiz",
+      "title": "Enigma 3.2 — Origen del nombre",
+      "description": "¿Por qué se llama ‘del Camp’?",
+      "riddle": {
+        "question": "¿Por qué se llama ‘del Camp’?",
+        "acceptedAnswers": [
+          "a"
+        ],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: Su nombre nos recuerda que en el siglo X esta zona aún no estaba dentro de la ciudad.",
+        "Fácil: En catalán, camp significa lo mismo que campo en castellano.",
+        "Solución: Porque estaba rodeado de campos fuera de las murallas."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 6,
+      "type": "riddle",
+      "title": "Enigma 3.3 — Espacio interior del monasterio",
+      "description": "¿Cómo se llama ese lugar especial lleno de capiteles con figuras curiosas?",
+      "riddle": {
+        "question": "¿Cómo se llama ese espacio?",
+        "acceptedAnswers": [
+          "claustro"
+        ],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: Era un patio interior usado para meditar y pasear en silencio.",
+        "Fácil: Muchos monasterios lo tienen, con columnas y capiteles esculpidos.",
+        "Solución: Claustro."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 7,
+      "type": "quiz",
+      "title": "Enigma 4.1 — El hada verde",
+      "description": "¿Cuál era el apodo del licor verde potente?",
+      "riddle": {
+        "question": "¿Cuál era el apodo del licor verde potente?",
+        "acceptedAnswers": [
+          "c"
+        ],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: El apodo combina el color de la bebida con una criatura mitológica alada.",
+        "Fácil: El ser mágico es como 'Campanilla'.",
+        "Solución: El Hada Verde."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 8,
+      "type": "riddle",
+      "title": "Enigma 4.2 — Escritor americano",
+      "description": "¿Cuál es el apellido del autor de 'El viejo y el mar'?",
+      "riddle": {
+        "question": "Apellido del autor americano",
+        "acceptedAnswers": [
+          "hemingway"
+        ],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: Escribió 'Por quién doblan las campanas'.",
+        "Fácil: Se llamaba Ernest.",
+        "Solución: Hemingway."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 9,
+      "type": "riddle",
+      "title": "Enigma 4.3 — Arquitecto bohemio",
+      "description": "¿Qué arquitecto, creador de la Sagrada Familia, también frecuentaba el Marsella?",
+      "riddle": {
+        "question": "Apellido del arquitecto",
+        "acceptedAnswers": [
+          "gaudí",
+          "gaudi"
+        ],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: Su apellido es un adjetivo hoy en día.",
+        "Fácil: Verás su huella en el Park Güell, Casa Batlló y Sagrada Familia.",
+        "Solución: Antoni Gaudí."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 10,
+      "type": "riddle",
+      "title": "Enigma 5.1 — Nombre de la calle",
+      "description": "¿Cuál es la calle que comparte nombre con el edificio?",
+      "riddle": {
+        "question": "¿Nombre de la calle del Hospital?",
+        "acceptedAnswers": [
+          "hospital"
+        ],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: Es una de las arterias principales del Raval.",
+        "Fácil: Es el Carrer de l'Hospital.",
+        "Solución: Carrer de l'Hospital."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 11,
+      "type": "riddle",
+      "title": "Enigma 5.2 — Estilo arquitectónico",
+      "description": "Haz una foto a un arco ojival del antiguo hospital.",
+      "riddle": {
+        "question": "¿Qué estilo tienen los arcos?",
+        "acceptedAnswers": [
+          "gótico",
+          "gotico"
+        ],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: Son arcos puntiagudos, diferentes del románico.",
+        "Fácil: Son típicos de catedrales medievales.",
+        "Solución: Arcos góticos."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 12,
+      "type": "quiz",
+      "title": "Enigma 5.3 — Muerte de un genio",
+      "description": "¿Qué artista murió en el Antiguo Hospital de la Santa Creu?",
+      "riddle": {
+        "question": "¿Qué artista murió aquí?",
+        "acceptedAnswers": [
+          "c"
+        ],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: Fue atropellado y no reconocido.",
+        "Fácil: Es el mismo que iba al Marsella.",
+        "Solución: Gaudí."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 13,
+      "type": "riddle",
+      "title": "Enigma 5.4 — Función del lugar",
+      "description": "Di en voz alta la función que tuvo este lugar por 500 años.",
+      "riddle": {
+        "question": "¿Qué era este edificio durante siglos?",
+        "acceptedAnswers": [
+          "hospital"
+        ],
+        "caseSensitive": false
+      },
+      "clues": [
+        "Difícil: Hoy es una biblioteca.",
+        "Fácil: Es un sinónimo de clínica.",
+        "Solución: Hospital."
+      ],
+      "points": 10,
+      "hintPenalty": 3
+    },
+    {
+      "order": 14,
+      "type": "narrative",
+      "title": "Recompensa Final",
+      "description": "Este viaje por el Raval ha desvelado su fascinante 'doble cara', desde la inspiración bohemia de Gaudí y la cara moderna del Gato de Botero, hasta el drama silencioso del torno y la paz del monasterio. Todo converge en el Antiguo Hospital. ¿Buscarás la suerte con el 'Hada Verde' o seguirás la tradición del Gato?"
+    }
+  ]
+}
