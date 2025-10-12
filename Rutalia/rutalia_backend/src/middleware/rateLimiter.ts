@@ -47,7 +47,12 @@ export const submitAttemptLimiter = rateLimit({
   legacyHeaders: false,
   message: { error: 'Demasiadas validaciones seguidas, espera unos segundos.' },
   keyGenerator: (req) => {
-    // Prioriza ID de usuario autenticado, si no, IP
-    return (req.user && req.user.sub) ? String(req.user.sub) : req.ip;
+    // Prioriza ID de usuario autenticado; fallback a IP o token 'anonymous'
+    if (req.user?.sub) return String(req.user.sub);
+    if (req.ip) return req.ip;
+    const forwarded = Array.isArray(req.headers['x-forwarded-for'])
+      ? req.headers['x-forwarded-for'][0]
+      : req.headers['x-forwarded-for'];
+    return typeof forwarded === 'string' && forwarded.length > 0 ? forwarded : 'anonymous';
   },
 });

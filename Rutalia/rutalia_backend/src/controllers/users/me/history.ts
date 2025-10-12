@@ -30,7 +30,7 @@ export async function getMyHistory(req: Request, res: Response) {
   const storyId = await resolveStoryId(q.story);
   if (storyId) filter.story = storyId;
 
-  const sort = q.sort === 'recent'
+  const sort: Record<string, 1 | -1> = q.sort === 'recent'
     ? { updatedAt: -1, startedAt: -1 }
     : { score: -1, updatedAt: -1 };
 
