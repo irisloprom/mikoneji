@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import { Schema, model, Document } from 'mongoose';
 
 export interface ITracking extends Document {
   userId: string;
@@ -26,4 +26,4 @@ const TrackingSchema: Schema = new Schema({
 
 TrackingSchema.index({ location: '2dsphere' });
 
-export default mongoose.model<ITracking>('Tracking', TrackingSchema);
+export const Tracking = model<ITracking>('Tracking', TrackingSchema);

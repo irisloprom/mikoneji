@@ -13,18 +13,18 @@ async function boot() {
   const server = http.createServer(app);
   server.listen(env.port, () => {
     // eslint-disable-next-line no-console
-    console.log(`🚀 Server ready on http://localhost:${env.port} [${env.nodeEnv}]`);
+    console.log(`[server] Listening on http://localhost:${env.port} [${env.nodeEnv}]`);
   });
 
-  // — Graceful shutdown
+  // - Graceful shutdown
   const shutdown = async (signal: string) => {
     // eslint-disable-next-line no-console
-    console.log(`\n🛑 Received ${signal}. Shutting down...`);
+    console.log(`\n[server] Received ${signal}. Shutting down...`);
     server.close(async () => {
       try {
         await mongoose.connection.close();
         // eslint-disable-next-line no-console
-        console.log('🗄️  MongoDB disconnected');
+        console.log('[server] MongoDB disconnected');
       } finally {
         process.exit(0);
       }
@@ -39,6 +39,6 @@ async function boot() {
 
 boot().catch((err) => {
   // eslint-disable-next-line no-console
-  console.error('❌ Failed to start:', err);
+  console.error('[server] Failed to start:', err);
   process.exit(1);
 });

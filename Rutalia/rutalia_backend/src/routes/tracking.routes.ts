@@ -1,10 +1,8 @@
-import express from 'express';
-import { trackProgress } from '../controllers/tracking.controller';
-import { authenticate } from '../middlewares/authenticate';
+import { Router } from 'express';
+import { requireAuth } from '../middleware/auth.js';
+import { wrap } from '../utils/wrap.js';
+import { trackProgress } from '../controllers/tracking.controller.js';
 
-const router = express.Router();
+export const trackingRouter = Router();
 
-// Ruta protegida para registrar tracking de usuario
-router.post('/tracking', authenticate, trackProgress);
-
-export default router;
+trackingRouter.post('/', requireAuth, wrap(trackProgress));
