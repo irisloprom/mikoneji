@@ -1,0 +1,368 @@
+{
+  "title": "La Doble Cara del Barrio Chino",
+  "slug": "doble-cara-barrio-chino",
+  "summary": "Descubre el contraste fascinante del Raval: del torno de los expósitos a los artistas bohemios del Bar Marsella, un viaje por la doble cara de su historia.",
+  "theme": "historica",
+  "neighborhood": "Raval",
+  "coverImageUrl": "https://res.cloudinary.com/rutalia/image/upload/v1699999999/rutas/barriochino/portada.jpg",
+  "durationMinutes": 50,
+  "tags": ["raval", "barcelona", "historia", "memoria", "modernismo", "bohemia"],
+  "language": "es",
+  "difficulty": "medium",
+  "estimatedSteps": 5,
+  "createdBy": "Rutalia Team",
+  "updatedAt": "2025-10-13T12:00:00.000Z",
+  "version": "1.0",
+  "requires": {
+    "gps": true,
+    "camera": true,
+    "voice": true
+  },
+  "analytics": {
+    "category": "urban-memory",
+    "kpiTags": ["heritage", "participation", "inclusivity"]
+  },
+  "status": "published",
+  "publishedAt": "2025-10-01T10:00:00.000Z",
+  "startLocation": {
+    "type": "Point",
+    "coordinates": [2.168, 41.38417],
+    "name": "Plaça de Vicenç Martorell"
+  },
+  "milestones": [
+    {
+      "order": 0,
+      "id": "barriochino-00",
+      "type": "narrative",
+      "title": "Introducción",
+      "description": "He encontrado las páginas perdidas de la libreta de un ingenioso cronista de los años 20. Su misión era escribir la 'otra' historia de Barcelona, la que no aparecía en las postales. Quería revelar la fascinante 'doble cara' del Barrio Chino: un lugar lleno de vida, contrastes y secretos asombrosos. ¿Me ayudáis a seguir su rastro y completar su crónica? ¡Vamos a sacar a la luz el legado que nos dejó! Nuestra primera parada está muy cerca, dirígete a la Plaça de Vicenç Martorell.",
+      "location": {
+        "name": "Plaça de Vicenç Martorell",
+        "type": "Point",
+        "coordinates": [2.168, 41.38417]
+      }
+    },
+    {
+      "order": 1,
+      "id": "barriochino-01",
+      "type": "riddle",
+      "title": "Enigma 1.1: El Mecanismo Silencioso (Parte 1)",
+      "description": "Crónica: 'He seguido un rastro de historias silenciosas hasta una plaza con nombre de escritor. Allí, incrustado en una pared, encontré un mecanismo que era a la vez un acto de amor y de desesperación.'",
+      "riddle": {
+        "question": "¿Cuál es el apellido del escritor que da nombre a la plaza donde se encuentra nuestro objetivo?",
+        "acceptedAnswers": ["martorell"],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Plaça de Vicenç Martorell",
+        "type": "Point",
+        "coordinates": [2.168, 41.38417]
+      }
+    },
+    {
+      "order": 2,
+      "id": "barriochino-02",
+      "type": "location",
+      "title": "Enigma 1.2: El Mecanismo Silencioso (Parte 2)",
+      "description": "¡Genial, estás en la Plaça Vicenç Martorell! Busca el 'mecanismo silencioso' del que hablaba la crónica, ese curioso agujero en la pared. Activa tu GPS y colócate justo delante del torno de madera junto al número 17.",
+      "riddle": {
+        "question": "¿Dónde está el mecanismo silencioso?",
+        "acceptedAnswers": ["17"],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Carrer del Carme, 17",
+        "type": "Point",
+        "coordinates": [2.168, 41.38417]
+      }
+    },
+    {
+      "order": 3,
+      "id": "barriochino-03",
+      "type": "narrative",
+      "title": "Recompensa 1",
+      "description": "¡Eso es, estáis en el lugar exacto! Este torno giratorio es un testigo mudo de incontables historias. Permitía a las madres dejar a sus bebés al cuidado de las monjas de forma anónima. Era un acto de amor y desesperación que salvó muchas vidas. Dejemos las sombras y busquemos al guardián de bronce en la Rambla del Raval.",
+      "location": {
+        "name": "Plaça de Vicenç Martorell",
+        "type": "Point",
+        "coordinates": [2.168, 41.38417]
+      }
+    },
+    {
+      "order": 4,
+      "id": "barriochino-04",
+      "type": "quiz",
+      "title": "Enigma 2.1: El Guardián de Bronce (Parte 1)",
+      "description": "Crónica: 'En medio de las leyendas sombrías, me topo con un guardián inesperado. Un felino de bronce, gigantesco y bonachón, que parece sonreírle a la gente en una gran rambla moderna abierta en el corazón del barrio.'",
+      "riddle": {
+        "question": "¿Cómo se llama esa rambla moderna?",
+        "acceptedAnswers": ["c", "rambla del raval"],
+        "caseSensitive": false
+      },
+      "choices": ["A", "B", "C", "D"],
+      "options": [
+        "La Rambla",
+        "Rambla de Catalunya",
+        "Rambla del Raval",
+        "Passeig de Gràcia"
+      ],
+      "location": {
+        "name": "Rambla del Raval",
+        "type": "Point",
+        "coordinates": [2.168, 41.379]
+      }
+    },
+    {
+      "order": 5,
+      "id": "barriochino-05",
+      "type": "photo",
+      "title": "Enigma 2.2: El Guardián de Bronce (Parte 2)",
+      "description": "El cronista quedó fascinado por el rostro de este guardián. Para demostrar que has encontrado su simpática cara, ¡sácale una foto a la escultura del Gato de Botero!",
+      "riddle": {
+        "question": "Haz una foto de la cara del Gato de Botero.",
+        "acceptedAnswers": ["gato"],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "text",
+        "description": "Opción para escribir 'GATO' si no puedes hacer la foto."
+      },
+      "location": {
+        "name": "Rambla del Raval",
+        "type": "Point",
+        "coordinates": [2.168, 41.379]
+      }
+    },
+    {
+      "order": 6,
+      "id": "barriochino-06",
+      "type": "narrative",
+      "title": "Recompensa 2",
+      "description": "¡Esa es la cara! Este enorme felino de Fernando Botero es el símbolo de la renovación del barrio. Dicen que frotar sus testículos trae buena suerte. ¡Un secreto a voces!",
+      "location": {
+        "name": "Rambla del Raval",
+        "type": "Point",
+        "coordinates": [2.168, 41.379]
+      }
+    },
+    {
+      "order": 7,
+      "id": "barriochino-07",
+      "type": "riddle",
+      "title": "Enigma 3.1: Lo Sagrado y lo Profano (Parte 1)",
+      "description": "Has llegado al Monasterio de Sant Pau del Camp. Este lugar es único: uno de los templos más antiguos de Barcelona. Escribe el nombre de su estilo arquitectónico.",
+      "riddle": {
+        "question": "¿Cuál es el estilo arquitectónico del Monasterio de Sant Pau del Camp?",
+        "acceptedAnswers": ["románico", "romanico"],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Sant Pau del Camp",
+        "type": "Point",
+        "coordinates": [2.1692, 41.37644]
+      }
+    },
+    {
+      "order": 8,
+      "id": "barriochino-08",
+      "type": "quiz",
+      "title": "Enigma 3.2: Lo Sagrado y lo Profano (Parte 2)",
+      "description": "El monasterio tiene un nombre curioso: Sant Pau del Camp. ¿Por qué se llama ‘del Camp’?",
+      "riddle": {
+        "question": "¿Por qué se llama 'del Camp'?",
+        "acceptedAnswers": ["a", "porque estaba rodeado de campos fuera de las murallas"],
+        "caseSensitive": false
+      },
+      "choices": ["A", "B", "C", "D"],
+      "options": [
+        "Porque estaba rodeado de campos fuera de las murallas.",
+        "Porque había un campanario muy alto.",
+        "Porque era el lugar de entrenamiento de los soldados.",
+        "Porque se construyó junto a un campo de juegos."
+      ],
+      "location": {
+        "name": "Sant Pau del Camp",
+        "type": "Point",
+        "coordinates": [2.1692, 41.37644]
+      }
+    },
+    {
+      "order": 9,
+      "id": "barriochino-09",
+      "type": "voice",
+      "title": "Enigma 3.3: Lo Sagrado y lo Profano (Parte 3)",
+      "description": "Además de iglesia, el monasterio tiene un espacio muy especial lleno de capiteles con figuras curiosas. Di en voz alta cómo se llama ese lugar.",
+      "riddle": {
+        "question": "¿Cómo se llama el espacio interior del monasterio lleno de capiteles?",
+        "acceptedAnswers": ["claustro"],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "text",
+        "description": "Botón para escribir la palabra 'CLAUSTRO'."
+      },
+      "location": {
+        "name": "Sant Pau del Camp",
+        "type": "Point",
+        "coordinates": [2.1692, 41.37644]
+      }
+    },
+    {
+      "order": 10,
+      "id": "barriochino-10",
+      "type": "riddle",
+      "title": "Enigma 4.1: El Secreto del Hada Verde (Parte 1)",
+      "description": "El cronista menciona una musa líquida famosa por su color y su efecto inspirador. ¿Cuál era su apodo?",
+      "riddle": {
+        "question": "¿Cuál era el apodo del licor verde asociado al Bar Marsella?",
+        "acceptedAnswers": ["c", "el hada verde"],
+        "caseSensitive": false
+      },
+      "choices": ["A", "B", "C", "D"],
+      "options": [
+        "El Elixir de los Poetas",
+        "La Pócima Esmeralda",
+        "El Hada Verde",
+        "La Sangre del Diablo"
+      ],
+      "location": {
+        "name": "Bar Marsella",
+        "type": "Point",
+        "coordinates": [2.1712, 41.37828]
+      }
+    },
+    {
+      "order": 11,
+      "id": "barriochino-11",
+      "type": "riddle",
+      "title": "Enigma 4.2: El Escritor Bohemio",
+      "description": "Un famoso escritor americano, autor de 'El viejo y el mar', también era cliente habitual del Marsella. ¿Cuál es su apellido?",
+      "riddle": {
+        "question": "¿Cuál es el apellido del autor americano cliente del Bar Marsella?",
+        "acceptedAnswers": ["hemingway"],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Bar Marsella",
+        "type": "Point",
+        "coordinates": [2.1712, 41.37828]
+      }
+    },
+    {
+      "order": 12,
+      "id": "barriochino-12",
+      "type": "riddle",
+      "title": "Enigma 4.3: El Arquitecto del Modernismo",
+      "description": "El cronista menciona a un arquitecto famoso, creador de la Sagrada Familia y cliente habitual del Marsella. ¿Cuál es su apellido?",
+      "riddle": {
+        "question": "¿Qué arquitecto creador de la Sagrada Familia era cliente habitual del Marsella?",
+        "acceptedAnswers": ["gaudí", "gaudi"],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Bar Marsella",
+        "type": "Point",
+        "coordinates": [2.1712, 41.37828]
+      }
+    },
+    {
+      "order": 13,
+      "id": "barriochino-13",
+      "type": "location",
+      "title": "Enigma 5.1: El Corazón de la Crónica (Parte 1)",
+      "description": "Dirígete a los jardines del Antiguo Hospital de la Santa Creu. Busca la entrada principal en el Carrer de l'Hospital.",
+      "riddle": {
+        "question": "¿Por qué calle se accede a los jardines del Antiguo Hospital de la Santa Creu?",
+        "acceptedAnswers": ["carrer de l'hospital", "hospital"],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Antiguo Hospital de la Santa Creu",
+        "type": "Point",
+        "coordinates": [2.17039, 41.38047]
+      }
+    },
+    {
+      "order": 14,
+      "id": "barriochino-14",
+      "type": "photo",
+      "title": "Enigma 5.2: Los Arcos Góticos",
+      "description": "Busca los arcos ojivales en las ventanas y galerías del Hospital de la Santa Creu. Sácale una foto a uno de ellos.",
+      "riddle": {
+        "question": "Haz una foto de un arco ojival del Hospital de la Santa Creu.",
+        "acceptedAnswers": ["arco gótico", "ojiva"],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "text",
+        "description": "Opción para escribir 'ARCO GÓTICO' si no puedes hacer la foto."
+      },
+      "location": {
+        "name": "Antiguo Hospital de la Santa Creu",
+        "type": "Point",
+        "coordinates": [2.17039, 41.38047]
+      }
+    },
+    {
+      "order": 15,
+      "id": "barriochino-15",
+      "type": "quiz",
+      "title": "Enigma 5.3: El Artista que Murió Aquí",
+      "description": "Este lugar acogió a ricos y pobres. Aquí murió uno de los genios del modernismo. ¿Quién fue?",
+      "riddle": {
+        "question": "¿Qué artista murió en el Hospital de la Santa Creu?",
+        "acceptedAnswers": ["c", "gaudí", "gaudi"],
+        "caseSensitive": false
+      },
+      "choices": ["A", "B", "C", "D"],
+      "options": ["Picasso", "Dalí", "Gaudí", "Miró"],
+      "location": {
+        "name": "Antiguo Hospital de la Santa Creu",
+        "type": "Point",
+        "coordinates": [2.17039, 41.38047]
+      }
+    },
+    {
+      "order": 16,
+      "id": "barriochino-16",
+      "type": "voice",
+      "title": "Enigma 5.4: La Palabra Final",
+      "description": "Desde los bebés del torno hasta los genios modernistas, todos pasaron por aquí. Di en voz alta la palabra que describe la función de este lugar durante siglos.",
+      "riddle": {
+        "question": "¿Cuál era la función principal del Hospital de la Santa Creu?",
+        "acceptedAnswers": ["hospital"],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "text",
+        "description": "Botón para escribir la palabra 'HOSPITAL'."
+      },
+      "location": {
+        "name": "Antiguo Hospital de la Santa Creu",
+        "type": "Point",
+        "coordinates": [2.17039, 41.38047]
+      }
+    },
+    {
+      "order": 17,
+      "id": "barriochino-17",
+      "type": "narrative",
+      "title": "Recompensa Final",
+      "description": "Este viaje por el Raval ha desvelado su fascinante 'doble cara': desde la inspiración bohemia de Gaudí y el Gato de Botero, hasta el drama del torno de expósitos y la paz del monasterio románico. Todas las historias convergen aquí, en el Antiguo Hospital, el corazón del barrio.",
+      "location": {
+        "name": "Antiguo Hospital de la Santa Creu",
+        "type": "Point",
+        "coordinates": [
+          2.1712,
+          41.3813
+        ]
+      }
+    }
+  ]
+}
+
+       
+
+
+
+

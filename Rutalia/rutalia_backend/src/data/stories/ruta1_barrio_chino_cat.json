@@ -1,0 +1,510 @@
+{
+  "title": "La Doble Cara del Barri Xino",
+  "slug": "la-doble-cara-del-barri-xino",
+  "summary": "Segueix el rastre d'un cronista dels anys 20 per revelar la fascinant 'doble cara' del Raval: un barri de contrastos, des dels secrets de la bohèmia fins al drama silenciós dels expòsits.",
+  "theme": "historic",
+  "neighborhood": "Raval",
+  "coverImageUrl": "https://res.cloudinary.com/rutalia/image/upload/v1700000000/rutas/barrixino/portada.jpg",
+  "durationMinutes": 50,
+  "tags": ["historia", "barcelona", "cultura", "rutes", "urbana"],
+  "language": "cat",
+  "difficulty": "medium",
+  "estimatedSteps": 5,
+  "createdBy": "Rutalia Team",
+  "updatedAt": "2025-10-13T12:00:00.000Z",
+  "version": "1.1",
+  "requires": {
+    "gps": true,
+    "camera": true,
+    "voice": true
+  },
+  "analytics": {
+    "category": "educational",
+    "kpiTags": ["discovery", "local_history", "engagement"]
+  },
+  "status": "draft",
+  "publishedAt": "2025-11-01T10:00:00.000Z",
+  "startLocation": {
+    "type": "Point",
+    "coordinates": [
+      2.1720,
+      41.3820
+    ],
+    "name": "Plaça de Vicenç Martorell"
+  },
+  "milestones": [
+    {
+      "order": 0,
+      "id": "intro-barrixino",
+      "type": "narrative",
+      "title": "Introducció: La Crònica Perduda",
+      "description": "He trobat les pàgines perdudes de la llibreta d'un enginyós cronista dels anys 20. La seva missió era escriure l''altra' història de Barcelona, la que no sortia a les postals. Volia revelar la fascinant 'doble cara' del Barri Xino: un lloc ple de vida, contrastos i secrets sorprenents. M'ajudeu a seguir-ne el rastre i a completar la crònica? La nostra primera parada és molt a prop, dirigeix-te a la plaça de Vicenç Martorell.",
+      "location": {
+        "name": "Plaça de Vicenç Martorell",
+        "type": "Point",
+        "coordinates": [
+          2.1720,
+          41.3820
+        ]
+      }
+    },
+    {
+      "order": 1,
+      "id": "riddle-1-1",
+      "type": "riddle",
+      "title": "Enigma 1.1: Plaça d'Escriptor",
+      "description": "El cronista va escriure: 'He seguit un rastre d'històries silencioses fins a una plaça amb nom d'escriptor...' Quin és el cognom de l'escriptor que dona nom a la plaça on es troba el nostre objectiu?",
+      "riddle": {
+        "question": "Cognom de l'escriptor que dona nom a la plaça",
+        "acceptedAnswers": [
+          "MARTORELL"
+        ],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Rodalies de Plaça de Vicenç Martorell",
+        "type": "Point",
+        "coordinates": [
+          2.1720,
+          41.3820
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "id": "riddle-1-2",
+      "type": "gps",
+      "title": "Enigma 1.2: El Mecanisme Silenciós",
+      "description": "Genial, ets a la plaça de Vicenç Martorell! Ara, busca el 'mecanisme silenciós' del qual parlava la crònica, aquell curiós forat a la paret (un torn de fusta). Per demostrar que l'has trobat, activa el GPS i posa-t'hi just al davant.",
+      "riddle": {
+        "question": "Apropa't al mecanisme (torn de fusta al costat del portal 17).",
+        "acceptedAnswers": [
+          "17"
+        ],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Torn dels expòsits (Plaça de Vicenç Martorell, 17)",
+        "type": "Point",
+        "coordinates": [
+          2.1717,
+          41.3824
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "id": "reward-1",
+      "type": "narrative",
+      "title": "Recompensa 1",
+      "description": "Això és, sou al lloc exacte! Aquest torn giratori és un testimoni mut d'incomptables històries. Permetia a les mares deixar els seus nadons a cura de les monges de manera anònima. Era un acte d'amor i desesperació que va salvar moltes vides. Deixem les ombres per un moment: busquem un guardià molt especial a la Rambla del Raval!",
+      "location": {
+        "name": "Torn dels expòsits (Plaça de Vicenç Martorell, 17)",
+        "type": "Point",
+        "coordinates": [
+          2.1717,
+          41.3824
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "id": "riddle-2-1",
+      "type": "quiz",
+      "title": "Enigma 2.1: La Rambla Moderna",
+      "description": "El cronista va escriure: 'Em topo amb un guardià inesperat. Un felí de bronze... en una gran rambla moderna oberta al cor del barri.' Com es diu aquesta 'rambla moderna'?",
+      "riddle": {
+        "question": "Com es diu la 'rambla moderna'?",
+        "acceptedAnswers": [
+          "c",
+          "rambla del raval"
+        ],
+        "caseSensitive": false
+      },
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options": [
+        "La Rambla",
+        "Rambla de Catalunya",
+        "Rambla del Raval",
+        "Passeig de Gràcia"
+      ],
+      "location": {
+        "name": "Rambla del Raval",
+        "type": "Point",
+        "coordinates": [
+          2.1720,
+          41.3780
+        ]
+      }
+    },
+    {
+      "order": 5,
+      "id": "riddle-2-2",
+      "type": "camera",
+      "title": "Enigma 2.2: La Cara del Guardià",
+      "description": "El cronista va quedar fascinat pel rostre d'aquest guardià. Per demostrar que has trobat la seva cara simpàtica, fes-li una foto!",
+      "riddle": {
+        "question": "Fes una foto al rostre del Gat de Botero.",
+        "acceptedAnswers": [
+          "GAT"
+        ],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Gat de Botero (Rambla del Raval)",
+        "type": "Point",
+        "coordinates": [
+          2.1720,
+          41.3780
+        ]
+      }
+    },
+    {
+      "order": 6,
+      "id": "reward-2",
+      "type": "narrative",
+      "title": "Recompensa 2",
+      "description": "Aquesta és la cara! Aquest felí enorme, obra de Fernando Botero, és el més famós de la Rambla del Raval. Abans d'instal·lar-se aquí el 2003, va passejar per mitja Barcelona! I encara que el cronista es va fixar en la seva cara, la llegenda popular se centra en una altra part... Diuen que fregar-li els testicles porta bona sort. Tornem a la 'doble cara' i dirigim-nos a la cantonada del carrer de Sant Pau, 99!",
+      "location": {
+        "name": "Gat de Botero (Rambla del Raval)",
+        "type": "Point",
+        "coordinates": [
+          2.1720,
+          41.3780
+        ]
+      }
+    },
+    {
+      "order": 7,
+      "id": "riddle-3-1",
+      "type": "riddle",
+      "title": "Enigma 3.1: El Tresor Romànic",
+      "description": "Has arribat al Monestir de Sant Pau del Camp, un dels temples més antics de Barcelona. Escriu el nom del seu estil arquitectònic. (Els seus arcs són de mig punt i els murs molt gruixuts).",
+      "riddle": {
+        "question": "Nom de l'estil arquitectònic del monestir.",
+        "acceptedAnswers": [
+          "ROMANIC"
+        ],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Monestir de Sant Pau del Camp (Sant Pau, 99)",
+        "type": "Point",
+        "coordinates": [
+          2.1746,
+          41.3787
+        ]
+      }
+    },
+    {
+      "order": 8,
+      "id": "riddle-3-2",
+      "type": "quiz",
+      "title": "Enigma 3.2: Del Camp",
+      "description": "El monestir té un nom curiós: Sant Pau del Camp. Per què es diu ‘del Camp’?",
+      "riddle": {
+        "question": "Raó del nom 'del Camp'",
+        "acceptedAnswers": [
+          "a",
+          "perque estava envoltat de camps fora de les muralles"
+        ],
+        "caseSensitive": false
+      },
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options": [
+        "Perquè estava envoltat de camps fora de les muralles",
+        "Perquè hi havia un campanar molt alt",
+        "Perquè era el lloc d'entrenament dels soldats",
+        "Perquè es va construir al costat d'un camp de jocs"
+      ],
+      "location": {
+        "name": "Monestir de Sant Pau del Camp (Sant Pau, 99)",
+        "type": "Point",
+        "coordinates": [
+          2.1746,
+          41.3787
+        ]
+      }
+    },
+    {
+      "order": 9,
+      "id": "riddle-3-3",
+      "type": "voice",
+      "title": "Enigma 3.3: L'Oasi de Pau",
+      "description": "A més de ser una església, el monestir té un espai molt especial ple de capitells amb figures curioses. Activa el micròfon i digues en veu alta com es diu aquest lloc (pati interior per meditar i passejar).",
+      "riddle": {
+        "question": "Com es diu el pati interior dels monestirs?",
+        "acceptedAnswers": [
+          "CLAUSTRE"
+        ],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "text",
+        "description": "Botó per escriure 'CLAUSTRE' si no pots fer servir el micròfon."
+      },
+      "location": {
+        "name": "Monestir de Sant Pau del Camp (Sant Pau, 99)",
+        "type": "Point",
+        "coordinates": [
+          2.1746,
+          41.3787
+        ]
+      }
+    },
+    {
+      "order": 10,
+      "id": "reward-3",
+      "type": "narrative",
+      "title": "Recompensa 3",
+      "description": "Exacte, el Monestir de Sant Pau del Camp! El seu nom significa 'del camp' perquè durant segles es va alçar aquí sol, fora de les muralles! Era un far de fe i saber a la frontera de la ciutat. Un exemple de com el sagrat ha conviscut amb el món més rude. Anem al següent punt: al Bar Marsella, a la cruïlla del carrer Sant Pau amb el carrer de Sant Ramon!",
+      "location": {
+        "name": "Monestir de Sant Pau del Camp (Sant Pau, 99)",
+        "type": "Point",
+        "coordinates": [
+          2.1746,
+          41.3787
+        ]
+      }
+    },
+    {
+      "order": 11,
+      "id": "riddle-4-1",
+      "type": "quiz",
+      "title": "Enigma 4.1: La Musa Líquida",
+      "description": "El cronista va escriure: 'La meva crònica comença aquí. L'aire fa olor d'història i d'anís.' Quin era el sobrenom màgic i poètic d'aquell licor verd molt potent que buscaven els artistes al Bar Marsella?",
+      "riddle": {
+        "question": "Sobrenom de l'absenta.",
+        "acceptedAnswers": [
+          "c",
+          "la fada verda"
+        ],
+        "caseSensitive": false
+      },
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options": [
+        "L'Elixir dels Poetes",
+        "La Poció Maragda",
+        "La Fada Verda",
+        "La Sang del Diable"
+      ],
+      "location": {
+        "name": "Bar Marsella (Sant Pau, 65)",
+        "type": "Point",
+        "coordinates": [
+          2.1738,
+          41.3794
+        ]
+      }
+    },
+    {
+      "order": 12,
+      "id": "riddle-4-2",
+      "type": "riddle",
+      "title": "Enigma 4.2: L'Escriptor Americà",
+      "description": "El cronista va anotar que un famós escriptor americà, premi Nobel i amant d'Espanya (autor d''El vell i la mar'), també n'era un client habitual. Quin és el seu cognom?",
+      "riddle": {
+        "question": "Cognom de l'autor d''El vell i la mar'.",
+        "acceptedAnswers": [
+          "HEMINGWAY"
+        ],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Bar Marsella (Sant Pau, 65)",
+        "type": "Point",
+        "coordinates": [
+          2.1738,
+          41.3794
+        ]
+      }
+    },
+    {
+      "order": 13,
+      "id": "riddle-4-3",
+      "type": "riddle",
+      "title": "Enigma 4.3: El Geni de Casa",
+      "description": "La fama del Marsella travessava fronteres. Però el cronista sempre tornava la mirada cap als genis de casa. Quin arquitecte, creador de la Sagrada Família, també n'era un client habitual?",
+      "riddle": {
+        "question": "Cognom de l'arquitecte de la Sagrada Família.",
+        "acceptedAnswers": [
+          "GAUDI"
+        ],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Bar Marsella (Sant Pau, 65)",
+        "type": "Point",
+        "coordinates": [
+          2.1738,
+          41.3794
+        ]
+      }
+    },
+    {
+      "order": 14,
+      "id": "reward-4",
+      "type": "narrative",
+      "title": "Recompensa 4",
+      "description": "Correcte, era Antoni Gaudí! Diuen que ell, com molts altres artistes de la talla de Picasso o Dalí, era un habitual d'aquest temple bohemi. La 'Fada Verda' segueix un ritual amb aigua, terròs de sucre i una forquilla. Anem al punt final de la crònica: als jardins propers de l'Antic Hospital de la Santa Creu!",
+      "location": {
+        "name": "Bar Marsella (Sant Pau, 65)",
+        "type": "Point",
+        "coordinates": [
+          2.1738,
+          41.3794
+        ]
+      }
+    },
+    {
+      "order": 15,
+      "id": "riddle-5-1",
+      "type": "gps",
+      "title": "Enigma 5.1: Recer de Pau",
+      "description": "El cronista va escriure: 'Acabo el meu viatge al lloc que va ser el centre de la salut de Barcelona durant segles...' Entra en aquest recés de pau. Busca l'entrada principal als jardins de l'antic complex. La trobaràs en un carrer que comparteix nom amb l'edifici. Activa el GPS a l'entrada.",
+      "riddle": {
+        "question": "Entra al Carrer de l'Hospital.",
+        "acceptedAnswers": [
+          "HOSPITAL"
+        ],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Entrada Antiga Hospital de la Santa Creu (Hospital, 56)",
+        "type": "Point",
+        "coordinates": [
+          2.1717,
+          41.3813
+        ]
+      }
+    },
+    {
+      "order": 16,
+      "id": "riddle-5-2",
+      "type": "camera",
+      "title": "Enigma 5.2: L'Arc Gòtic",
+      "description": "Ja ets a dins! El cronista es fixa en l'estil gòtic. Busca l'element arquitectònic que es repeteix a les finestres i galeries, amb una forma d'arc apuntat molt característica. Fes-li una foto a un d'aquests arcs!",
+      "riddle": {
+        "question": "Fes una foto a un arc gòtic (ogival).",
+        "acceptedAnswers": [
+          "GÒTIC"
+        ],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Antic Hospital de la Santa Creu (Jardins)",
+        "type": "Point",
+        "coordinates": [
+          2.1712,
+          41.3813
+        ]
+      }
+    },
+    {
+      "order": 17,
+      "id": "riddle-5-3",
+      "type": "quiz",
+      "title": "Enigma 5.3: El Geni Moribund",
+      "description": "Aquest lloc va acollir rics i pobres. De fet, aquí va morir un dels artistes que hem esmentat al principi de la nostra crònica. Qui va ser?",
+      "riddle": {
+        "question": "Artista que va morir a l'hospital després d'un atropellament.",
+        "acceptedAnswers": [
+          "c",
+          "gaudi"
+        ],
+        "caseSensitive": false
+      },
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options": [
+        "Picasso",
+        "Dalí",
+        "Gaudí",
+        "Miró"
+      ],
+      "location": {
+        "name": "Antic Hospital de la Santa Creu (Jardins)",
+        "type": "Point",
+        "coordinates": [
+          2.1712,
+          41.3813
+        ]
+      }
+    },
+    {
+      "order": 18,
+      "id": "riddle-5-4",
+      "type": "voice",
+      "title": "Enigma 5.4: El Cor de la Crònica",
+      "description": "Des dels nadons del torn fins al geni modernista, tots van passar per aquí. Per tancar el cercle, activa el micròfon i digues en veu alta la paraula que descriu la funció principal que va tenir aquest lloc durant 500 anys.",
+      "riddle": {
+        "question": "Funció principal de l'edifici durant 500 anys.",
+        "acceptedAnswers": [
+          "HOSPITAL"
+        ],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "text",
+        "description": "Botó per escriure 'HOSPITAL' si no pots fer servir el micròfon."
+      },
+      "location": {
+        "name": "Antic Hospital de la Santa Creu (Jardins)",
+        "type": "Point",
+        "coordinates": [
+          2.1712,
+          41.3813
+        ]
+      }
+    },
+    {
+      "order": 19,
+      "id": "reward-5",
+      "type": "narrative",
+      "title": "Recompensa 5",
+      "description": "Justa aquesta paraula: HOSPITAL! Has arribat al cor de la crònica. Aquest magnífic edifici gòtic va ser durant més de 500 anys el principal Hospital de Barcelona. Per aquí van passar totes les ànimes de la ciutat. És el lloc perfecte per tancar el cercle, ja que entre els seus murs es guarden els ecos de totes les històries, les lluminoses i les fosques, que conformen el veritable llegat del Raval.",
+      "location": {
+        "name": "Antic Hospital de la Santa Creu (Jardins)",
+        "type": "Point",
+        "coordinates": [
+          2.1712,
+          41.3813
+        ]
+      }
+    },
+    {
+      "order": 20,
+      "id": "final-reward",
+      "type": "narrative",
+      "title": "Recompensa Final",
+      "description": "Aquest viatge pel Raval ha revelat la seva fascinant 'doble cara', des de la inspiració bohèmia de Gaudí i la cara moderna del Gat de Botero, fins al drama silenciós del torn dels expòsits i la pau d'un monestir antic. Totes les històries, lluminoses i fosques, conflueixen a l'Antic Hospital, demostrant que el sobrenom de 'Barri Xino' només amagava la rica història d'un barri obrer i divers. L'elecció és teva: la sort de la 'Fada Verda' o la del gat?",
+      "location": {
+        "name": "Antic Hospital de la Santa Creu (Jardins)",
+        "type": "Point",
+        "coordinates": [
+          2.1712,
+          41.3813
+        ]
+      }
+    }
+  ]
+}

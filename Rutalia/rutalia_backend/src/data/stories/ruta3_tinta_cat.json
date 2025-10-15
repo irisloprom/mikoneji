@@ -1,0 +1,294 @@
+{
+  "title": "La Tinta de la Llibertat",
+  "slug": "la-tinta-de-la-llibertat",
+  "summary": "Segueix el rastre d'una crònica perduda pels carrers de Gràcia per descobrir com la resistència va mantenir viva la llengua i la cultura catalanes durant la dictadura a través d'impremtes clandestines.",
+  "theme": "historic",
+  "neighborhood": "Gràcia",
+  "coverImageUrl": "https://res.cloudinary.com/rutalia/image/upload/v1700000000/rutas/gracia-llibertat/portada.jpg",
+  "durationMinutes": 50,
+  "tags": ["historia", "gracia", "dictadura", "cultura_catalana", "llibertat"],
+  "language": "ca",
+  "difficulty": "medium",
+  "estimatedSteps": 5,
+  "createdBy": "Rutalia Team",
+  "updatedAt": "2025-10-15T14:11:05.000Z",
+  "version": "1.0",
+  "requires": {
+    "gps": true,
+    "camera": true,
+    "voice": true
+  },
+  "analytics": {
+    "category": "educational",
+    "kpiTags": ["resistance", "cultural_heritage", "local_memory"]
+  },
+  "status": "published",
+  "publishedAt": "2025-10-15T14:11:05.000Z",
+  "startLocation": {
+    "type": "Point",
+    "coordinates": [
+      2.157722,
+      41.400111
+    ],
+    "name": "Plaça de la Vila de Gràcia"
+  },
+  "milestones": [
+    {
+      "order": 0,
+      "id": "intro-tinta",
+      "type": "narrative",
+      "title": "Introducció: La Crònica de la Tinta",
+      "description": "Explorador/a, he trobat una altra crònica perduda! Aquesta vegada, el nostre cronista s'endinsa a les places i carrerons de Gràcia per seguir una idea: la llibertat impresa en paper. Durant la dictadura, Gràcia es va convertir en un taller clandestí on un grup de valents imprimien en català i difonien propaganda prohibida. A punt per descobrir els secrets que s'amagaven rere la tinta? La nostra història comença al cor de la Vila, a la plaça de la Vila de Gràcia!",
+      "location": {
+        "name": "Plaça de la Vila de Gràcia",
+        "type": "Point",
+        "coordinates": [
+          2.157722,
+          41.400111
+        ]
+      }
+    },
+    {
+      "order": 1,
+      "id": "riddle-1-camera",
+      "type": "camera",
+      "title": "Enigma 1: El Símbol de Gràcia",
+      "description": "El cronista va escriure: 'Mentre la torre representava el poder visible, la gent de Gràcia es va convertir en l'autèntic símbol de la identitat del barri.' Fes una foto del símbol que, segons el cronista, marca el temps oficial i representa la veritable identitat de Gràcia: la torre del campanar.",
+      "riddle": {
+        "question": "Fes una foto al campanar de la plaça.",
+        "acceptedAnswers": [
+          "CAMPANAR"
+        ],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "riddle",
+        "description": "Si la càmera no funciona, quin objecte corona la torre i marca el temps oficial?",
+        "riddle": {
+          "question": "Objecte que corona la torre i marca el temps oficial.",
+          "acceptedAnswers": [
+            "RELLOTGE"
+          ],
+          "caseSensitive": false
+        }
+      },
+      "location": {
+        "name": "Campanar de la Plaça de la Vila de Gràcia",
+        "type": "Point",
+        "coordinates": [
+          2.157722,
+          41.400111
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "id": "reward-1",
+      "type": "narrative",
+      "title": "Recompensa 1",
+      "description": "Aquesta és la torre! Mentre el seu rellotge marcava un temps de silenci imposat, a les cases properes s'organitzava el 'soroll'. Les impremtes clandestines feien servir tècniques com el ciclostil per produir pasquins, revistes i llibres en català, tot el que el règim havia prohibit. Era una feina arriscada que mantenia viva una cultura. Ara, seguim el rastre de la inspiració literària fins a una de les places més famoses: la plaça del Diamant.",
+      "location": {
+        "name": "Plaça de la Vila de Gràcia",
+        "type": "Point",
+        "coordinates": [
+          2.157722,
+          41.400111
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "id": "riddle-2-voice",
+      "type": "voice",
+      "title": "Enigma 2: La Colometa",
+      "description": "El cronista esmenta la plaça immortalitzada per Mercè Rodoreda. Activa el micròfon i digues en veu alta el nom amb què tothom coneixia la protagonista de 'La plaça del Diamant'.",
+      "riddle": {
+        "question": "Nom popular de la protagonista de 'La plaça del Diamant'.",
+        "acceptedAnswers": [
+          "COLOMETA"
+        ],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "text",
+        "description": "Botó per escriure 'COLOMETA' si no pots fer servir el micròfon."
+      },
+      "location": {
+        "name": "Plaça del Diamant",
+        "type": "Point",
+        "coordinates": [
+          2.155889,
+          41.404083
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "id": "reward-2",
+      "type": "narrative",
+      "title": "Recompensa 2",
+      "description": "Has invocat la Colometa! La novel·la de Mercè Rodoreda és el millor exemple del que es defensava amb aquella tinta clandestina: la llengua i la cultura catalanes. Distribuir un llibre com aquest era un delicte greu, però per als activistes, era vital. Significava dir-li al món i a ells mateixos que la seva identitat continuava viva. Ara que sabem per què ho feien, anem a veure com ho distribuïen. Posa rumb al carrer de Verdi!",
+      "location": {
+        "name": "Plaça del Diamant",
+        "type": "Point",
+        "coordinates": [
+          2.155889,
+          41.404083
+        ]
+      }
+    },
+    {
+      "order": 5,
+      "id": "riddle-3-gps",
+      "type": "gps",
+      "title": "Enigma 3: El Formiguer Invisible",
+      "description": "El cronista ret homenatge als distribuïdors anònims: 'Soc al carrer de Verdi, un formiguer de gent... La xarxa de distribució era invisible i el seu èxit depenia de ser al lloc correcte.' Per demostrar que has arribat al cor de la xarxa de distribució, activa el GPS i posa't en aquest punt neuràlgic del barri.",
+      "riddle": {
+        "question": "Activa el GPS al carrer de Verdi (a prop de la cruïlla amb el carrer del Robí).",
+        "acceptedAnswers": [
+          "ROBÍ"
+        ],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "riddle",
+        "description": "Si el GPS falla, busca una de les moltes sales de cinema d'aquest carrer i escriu-ne el nom.",
+        "riddle": {
+          "question": "Nom d'una sala de cinema del carrer de Verdi.",
+          "acceptedAnswers": [
+            "CINEMES VERDI"
+          ],
+          "caseSensitive": false
+        }
+      },
+      "location": {
+        "name": "Carrer de Verdi (Zona central)",
+        "type": "Point",
+        "coordinates": [
+          2.155722,
+          41.404917
+        ]
+      }
+    },
+    {
+      "order": 6,
+      "id": "reward-3",
+      "type": "narrative",
+      "title": "Recompensa 3",
+      "description": "Ets en plena zona d'operacions! La feina de distribució era potser la més perillosa. Figures com l'Octavi Pellissa van ser clau organitzant aquestes xarxes, però el mèrit era de les desenes de persones anònimes que s'arris-caven cada dia. El cinema, les botigues, les porteries... qualsevol lloc era bo per passar un paquet de pamflets. Ara, anem a un lloc emblemàtic per a aquesta lluita, al carrer de Lluïsos, a Gràcia.",
+      "location": {
+        "name": "Carrer de Verdi (Zona central)",
+        "type": "Point",
+        "coordinates": [
+          2.155722,
+          41.404917
+        ]
+      }
+    },
+    {
+      "order": 7,
+      "id": "riddle-4-riddle",
+      "type": "riddle",
+      "title": "Enigma 4: El Tresor Guardat",
+      "description": "El cronista arriba davant dels Lluïsos de Gràcia, un ateneu que va ser un refugi. Què era el més valuós que aquests centres culturals van ajudar a preservar durant la dictadura? (Escriviu la resposta en una frase curta).",
+      "riddle": {
+        "question": "El més valuós que van preservar els ateneus.",
+        "acceptedAnswers": [
+          "LA CULTURA CATALANA",
+          "CULTURA CATALANA",
+          "LA LLENGUA",
+          "LA CULTURA"
+        ],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Lluïsos de Gràcia (Carrer de Lluïsos)",
+        "type": "Point",
+        "coordinates": [
+          2.155700,
+          41.407111
+        ]
+      }
+    },
+    {
+      "order": 8,
+      "id": "reward-4",
+      "type": "narrative",
+      "title": "Recompensa 4",
+      "description": "Correcte! Els ateneus com els Lluïsos de Gràcia van ser guardians d'una identitat. A través del teatre, la música i les activitats culturals, van aconseguir mantenir viva la llengua i la memòria col·lectiva del poble català. La cultura també és una forma de llibertat! Ara, el cronista segueix el seu rastre cap a un lloc on la paraula es va convertir en acció: una antiga fàbrica reconvertida en espai de barri. Ves al carrer de la Sedeta.",
+      "location": {
+        "name": "Lluïsos de Gràcia (Carrer de Lluïsos)",
+        "type": "Point",
+        "coordinates": [
+          2.155700,
+          41.407111
+        ]
+      }
+    },
+    {
+      "order": 9,
+      "id": "riddle-5-quiz",
+      "type": "quiz",
+      "title": "Enigma 5: La Màquina Perfecta",
+      "description": "El cronista arriba a La Sedeta. Aquí, els membres de CCOO tenien un tresor: una màquina per imprimir propaganda a tota velocitat, un aparell que reproduïa centenars de còpies. Quin era el nom d'aquest aparell d'impressió ràpida?",
+      "riddle": {
+        "question": "Nom de l'aparell d'impressió ràpida usat en la clandestinitat.",
+        "acceptedAnswers": [
+          "c",
+          "un ciclostil"
+        ],
+        "caseSensitive": false
+      },
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options": [
+        "Una premsa tipogràfica",
+        "Un teler mecànic",
+        "Un ciclostil",
+        "Una màquina d'escriure"
+      ],
+      "location": {
+        "name": "La Sedeta (Carrer de la Sedeta)",
+        "type": "Point",
+        "coordinates": [
+          2.167861,
+          41.405861
+        ]
+      }
+    },
+    {
+      "order": 10,
+      "id": "reward-5",
+      "type": "narrative",
+      "title": "Recompensa 5",
+      "description": "Exacte, un ciclostil! Aquesta màquina, relativament senzilla, permetia fer còpies de manera ràpida i barata, l'eina perfecta per a la guerrilla comunicativa. La Sedeta va ser el cor d'aquesta resistència silenciosa: entre bobines, telers i olor de tinta, s'hi va imprimir la paraula que va ajudar a alliberar una ciutat.",
+      "location": {
+        "name": "La Sedeta (Carrer de la Sedeta)",
+        "type": "Point",
+        "coordinates": [
+          2.167861,
+          41.405861
+        ]
+      }
+    },
+    {
+      "order": 11,
+      "id": "final-reward",
+      "type": "narrative",
+      "title": "Recompensa Final",
+      "description": "Hem completat la crònica de la tinta i la llibertat! Aquest viatge ens ha mostrat que la resistència més poderosa de vegades en té prou amb paper, tinta i valentia. Des del campanar fins a la producció clandestina a La Sedeta, hem descobert com tota una ciutat va aprendre a resistir amb creativitat i coratge. Avui, La Sedeta és un espai obert a la cultura i la memòria. Les mateixes parets que van protegir la paraula ara la celebren. I encara que avui imprimir un text sigui tan fàcil com prémer un botó, cada pàgina continua sent, en el fons, un acte de llibertat. Continuem explorant!",
+      "location": {
+        "name": "La Sedeta (Carrer de la Sedeta)",
+        "type": "Point",
+        "coordinates": [
+          2.167861,
+          41.405861
+        ]
+      }
+    }
+  ]
+}

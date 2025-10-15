@@ -1,0 +1,282 @@
+{
+  "title": "El Petó de Judes",
+  "slug": "el-peto-de-judes",
+  "summary": "Descobreix la màgia del número 33 i la llegenda del petó més famós de la història sota la mirada de Judes a la Sagrada Família.",
+  "theme": "historic",
+  "neighborhood": "Sagrada Família",
+  "coverImageUrl": "https://res.cloudinary.com/rutalia/image/upload/v1700000000/rutas/judas/portada.jpg",
+  "durationMinutes": 25,
+  "tags": ["test", "numerologia", "religio", "art", "barcelona"],
+  "language": "cat",
+  "difficulty": "easy",
+  "estimatedSteps": 5,
+  "createdBy": "Rutalia Team",
+  "updatedAt": "2025-10-13T12:00:00.000Z",
+  "version": "1.0",
+  "requires": {
+    "gps": false,
+    "camera": false,
+    "voice": true
+  },
+  "analytics": {
+    "category": "educational",
+    "kpiTags": ["engagement", "learning", "faith"]
+  },
+  "status": "published",
+  "publishedAt": "2025-10-01T10:00:00.000Z",
+  "startLocation": {
+    "type": "Point",
+    "coordinates": [
+      0,
+      0
+    ],
+    "name": "Sagrada Família"
+  },
+  "milestones": [
+    {
+      "order": 0,
+      "id": "judas-00",
+      "type": "narrative",
+      "title": "Introducció",
+      "description": "En una de les façanes de la Sagrada Família hi ha una estàtua amb un quadrat màgic al costat. L'estàtua representa Judes, deixeble de Jesús, però la llegenda que envolta l'escultura és molt més romàntica: diuen que si dues persones enamorades es fan un petó sota aquesta, el seu amor durarà per sempre més. Jo no en sé gaire, d'amor, però sí que sé per què d'aquest quadrat en diuen màgic. Anem a descobrir-ho!",
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "order": 1,
+      "id": "judas-01",
+      "type": "riddle",
+      "title": "Enigma 1: La Primera Fila",
+      "description": "Per començar amb la màgia, farem una petita suma. Em podries dir quin és el resultat de la suma de tots els nombres de la primera fila del quadrat màgic?",
+      "riddle": {
+        "question": "Quin és el resultat de la suma dels nombres de la primera fila?",
+        "acceptedAnswers": [
+          "33"
+        ],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "id": "judas-02",
+      "type": "narrative",
+      "title": "Recompensa 1",
+      "description": "Així és! La suma dels nombres és 33. Aquest número és molt especial per a la religió catòlica: Jesús de Natzaret va morir als 33 anys, crucificat al Gòlgota. La tradició sosté que la seva mort va ser un sacrifici voluntari per a la redempció de la humanitat. El número 33 s'associa també amb els seus miracles i amb el simbolisme espiritual de la fe cristiana.",
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "id": "judas-03",
+      "type": "voice",
+      "title": "Enigma 2: La Segona Fila",
+      "description": "Seguim amb la màgia. Podries dir a través del micròfon quina és la suma dels nombres de la segona fila del quadrat màgic?",
+      "riddle": {
+        "question": "Quina és la suma dels nombres de la segona fila?",
+        "acceptedAnswers": [
+          "33"
+        ],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "text",
+        "description": "Botó per escriure '33' si no pots fer servir el micròfon."
+      },
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "id": "judas-04",
+      "type": "narrative",
+      "title": "Recompensa 2",
+      "description": "Efectivament, també 33! Cada fila del quadrat màgic suma el mateix. Alguns historiadors associen aquest número amb els miracles de Jesús i amb el Salm 33, que lloa Déu per la seva paraula i poder. Continuem descobrint la màgia dels nombres!",
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "order": 5,
+      "id": "judas-05",
+      "type": "quiz",
+      "title": "Enigma 3: La Màgia Vertical",
+      "description": "Si les files sumen 33, quin número obtindrem en sumar els nombres d'una mateixa columna?",
+      "riddle": {
+        "question": "Quina és la suma dels nombres d'una columna del quadrat màgic?",
+        "acceptedAnswers": [
+          "33",
+          "d"
+        ],
+        "caseSensitive": false
+      },
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options": [
+        "13",
+        "31",
+        "23",
+        "33"
+      ],
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "order": 6,
+      "id": "judas-06",
+      "type": "narrative",
+      "title": "Recompensa 3",
+      "description": "Exacte! El número 33 torna a aparèixer. En un quadrat màgic, totes les files, columnes i diagonals sumen el mateix. El més antic que es coneix es diu Lo Shu, un quadrat màgic xinès de fa més de 2500 anys, trobat a la closca d'una tortuga mítica.",
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "order": 7,
+      "id": "judas-07",
+      "type": "riddle",
+      "title": "Enigma 4: El Número que Falta",
+      "description": "Ja saps com funcionen els quadrats màgics. Podries completar el quadrat? Quin número falta a la casella buida?",
+      "riddle": {
+        "question": "Quin número falta a la casella buida del quadrat màgic?",
+        "acceptedAnswers": [
+          "7"
+        ],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "order": 8,
+      "id": "judas-08",
+      "type": "narrative",
+      "title": "Recompensa 4",
+      "description": "Correcte! La resposta és 7. Aquest quadrat és un exemple de 'Quadrat Màgic amb Repetició'. No tots els quadrats màgics són iguals; alguns, com aquest, repeteixen nombres per mantenir la suma constant. Hem acabat amb la màgia? Encara falta parlar de l'amor... Potser l'amor no és també una mena de màgia?",
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "order": 9,
+      "id": "judas-09",
+      "type": "quiz",
+      "title": "Enigma 5: El Petó de la Traïció",
+      "description": "En aquesta escultura hi ha representades dues persones: una és Jesús i l'altra, qui li dona el petó de la traïció. Sabries quin és el seu nom?",
+      "riddle": {
+        "question": "Qui va ser l'apòstol que va trair Jesús amb un petó?",
+        "acceptedAnswers": [
+          "d",
+          "judas"
+        ],
+        "caseSensitive": false
+      },
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options": [
+        "Mateu",
+        "Jaume",
+        "Marc",
+        "Judes"
+      ],
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "order": 10,
+      "id": "judas-10",
+      "type": "narrative",
+      "title": "Recompensa 5",
+      "description": "Exacte, va ser Judes. El seu petó va trair Jesús per 30 monedes de plata, donant origen a una de les escenes més recordades del cristianisme. Aquest gest, d'aparent afecte, es va convertir en símbol de traïció. També ha inspirat obres modernes com 'El Padrí', on un petó pot segellar el destí de qui el rep.",
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "order": 11,
+      "id": "judas-11",
+      "type": "narrative",
+      "title": "Recompensa Final",
+      "description": "Has desvelat la màgia del 33! Un número ple de simbolisme religiós i místic. En aquesta ruta hem descobert com els Quadrats Màgics, l'art i la fe s'entrellacen. I, per descomptat, la història del petó més famós de tots els temps: el de Judes. Al final, l'amor, la màgia i la traïció es confonen... I tu? Series capaç de fer un petó etern o un d'enverinat?",
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    }
+  ]
+}

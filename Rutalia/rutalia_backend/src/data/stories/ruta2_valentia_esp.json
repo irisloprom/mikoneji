@@ -1,0 +1,224 @@
+{
+  "title": "La Tinta de la Llibertat",
+  "slug": "tinta-de-la-llibertat",
+  "summary": "Descubre cómo la tinta se convirtió en un arma de resistencia en la Gràcia clandestina: la historia de quienes imprimieron libertad en papel.",
+  "theme": "historica",
+  "neighborhood": "Gràcia",
+  "coverImageUrl": "https://res.cloudinary.com/rutalia/image/upload/v1699999999/rutas/tinta_llibertat/portada.jpg",
+  "durationMinutes": 50,
+  "tags": ["gracia", "historia", "memoria", "catalunya", "libertad", "resistencia"],
+  "language": "es",
+  "difficulty": "medium",
+  "estimatedSteps": 5,
+  "createdBy": "Rutalia Team",
+  "updatedAt": "2025-10-13T12:00:00.000Z",
+  "version": "1.0",
+  "requires": {
+    "gps": true,
+    "camera": true,
+    "voice": true
+  },
+  "analytics": {
+    "category": "cultural-memory",
+    "kpiTags": ["heritage", "freedom", "education"]
+  },
+  "status": "published",
+  "publishedAt": "2025-10-01T10:00:00.000Z",
+  "startLocation": {
+    "type": "Point",
+    "coordinates": [2.1577, 41.40011],
+    "name": "Plaça de la Vila de Gràcia"
+  },
+  "milestones": [
+    {
+      "order": 0,
+      "id": "tinta-00",
+      "type": "narrative",
+      "title": "Introducción",
+      "description": "¡Explorador, he encontrado otra crónica perdida! Esta vez, nuestro cronista se adentra en las plazas y callejuelas de Gràcia, no para seguir a un personaje, sino a una idea: la libertad impresa en papel. Durante la dictadura, Gràcia se convirtió en un taller clandestino donde valientes imprimían en catalán y difundían propaganda prohibida. ¿Listo para descubrir los secretos que se escondían tras la tinta? ¡Nuestra historia empieza en el corazón de la Vila, en la Plaça de la Vila de Gràcia!",
+      "location": {
+        "name": "Plaça de la Vila de Gràcia",
+        "type": "Point",
+        "coordinates": [2.1577, 41.40011]
+      }
+    },
+    {
+      "order": 1,
+      "id": "tinta-01",
+      "type": "photo",
+      "title": "Enigma 1: El símbolo de Gràcia",
+      "description": "El cronista observa el centro neurálgico del barrio y escribe: 'Aquí, en la Plaça de la Vila, todo parece normal. El imponente campanario marca las horas oficiales, el tiempo del régimen. Pero en los pisos de alrededor, otro tiempo latía en secreto, el de la resistencia. Mientras la torre representaba el poder visible, la gente de Gràcia se convirtió en el auténtico símbolo de la identidad del barrio.' Saca una foto del símbolo que representa la verdadera identidad de Gràcia: la torre del campanario.",
+      "riddle": {
+        "question": "Haz una foto del campanario de la Plaça de la Vila de Gràcia.",
+        "acceptedAnswers": ["campanario", "reloj"],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "text",
+        "description": "Si no puedes hacer la foto, escribe qué objeto corona la torre y marca el tiempo oficial: RELOJ."
+      },
+      "location": {
+        "name": "Plaça de la Vila de Gràcia",
+        "type": "Point",
+        "coordinates": [2.1577, 41.40011]
+      }
+    },
+    {
+      "order": 2,
+      "id": "tinta-02",
+      "type": "narrative",
+      "title": "Recompensa 1",
+      "description": "¡Esa es la torre! Mientras su reloj marcaba un tiempo de silencio impuesto, en las casas cercanas se organizaba el 'ruido': las imprentas clandestinas. Usando ciclostiles y tipografías portátiles, producían pasquines, revistas y libros en catalán. Era un trabajo arriesgado que mantenía viva una cultura prohibida. Sigamos hacia la Plaça del Diamant, donde la literatura se convirtió en resistencia.",
+      "location": {
+        "name": "Plaça de la Vila de Gràcia",
+        "type": "Point",
+        "coordinates": [2.1577, 41.40011]
+      }
+    },
+    {
+      "order": 3,
+      "id": "tinta-03",
+      "type": "voice",
+      "title": "Enigma 2: La voz de Colometa",
+      "description": "El cronista llega a la Plaça del Diamant y escucha ecos de una voz literaria: 'Su historia, escrita en el exilio y en catalán, era justo el tipo de obra que se imprimía en secreto por estas calles. Recordar su nombre es honrarla a ella y a todos los que lucharon para que su voz no se apagara.' Di en voz alta el nombre por el que todos conocían a la protagonista de 'La Plaça del Diamant'.",
+      "riddle": {
+        "question": "¿Cuál es el nombre de la protagonista de 'La Plaça del Diamant'?",
+        "acceptedAnswers": ["colometa"],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "text",
+        "description": "Escribe la respuesta si no puedes usar el micrófono: COLOMETA."
+      },
+      "location": {
+        "name": "Plaça del Diamant",
+        "type": "Point",
+        "coordinates": [2.1559, 41.40408]
+      }
+    },
+    {
+      "order": 4,
+      "id": "tinta-04",
+      "type": "narrative",
+      "title": "Recompensa 2",
+      "description": "¡Has invocado a Colometa! La novela de Mercè Rodoreda simboliza la resistencia cultural que defendían quienes imprimían en la clandestinidad. Publicar o distribuir un libro en catalán era un acto de valentía. Ahora, sigamos el rastro de esas 'formiguetes' que movían las palabras por las calles: pon rumbo a la Calle de Verdi.",
+      "location": {
+        "name": "Plaça del Diamant",
+        "type": "Point",
+        "coordinates": [2.1559, 41.40408]
+      }
+    },
+    {
+      "order": 5,
+      "id": "tinta-05",
+      "type": "location",
+      "title": "Enigma 3: Las hormiguitas de Verdi",
+      "description": "El cronista rinde homenaje a los distribuidores anónimos: 'Estoy en la Calle de Verdi, un hervidero de gente. Aquí actuaban como 'formiguetes' (hormiguitas), repartiendo panfletos de mano en mano, en bares o cines. Su éxito dependía de pasar desapercibidos.' Activa tu GPS y colócate en el corazón de esta red de distribución.",
+      "riddle": {
+        "question": "Activa el GPS o escribe el nombre de una de las salas de cine de esta calle.",
+        "acceptedAnswers": ["cines verdi", "verdi"],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "text",
+        "description": "Si el GPS falla, escribe el nombre de una sala de cine de la calle: CINES VERDI."
+      },
+      "location": {
+        "name": "Carrer de Verdi",
+        "type": "Point",
+        "coordinates": [2.1546, 41.40491]
+      }
+    },
+    {
+      "order": 6,
+      "id": "tinta-06",
+      "type": "narrative",
+      "title": "Recompensa 3",
+      "description": "¡Estás en plena zona de operaciones! Distribuir material prohibido era arriesgado. Figuras como Octavi Pellissa del PSUC coordinaron redes clandestinas, pero el mérito fue de cientos de anónimos. Cines, tiendas y portales eran puntos de paso para la libertad impresa. Dirígete ahora al Carrer de los Lluïsos de Gràcia.",
+      "location": {
+        "name": "Carrer de Verdi",
+        "type": "Point",
+        "coordinates": [2.1546, 41.40491]
+      }
+    },
+    {
+      "order": 7,
+      "id": "tinta-07",
+      "type": "riddle",
+      "title": "Enigma 4: Guardianes de la cultura",
+      "description": "El cronista escribe: 'Estoy frente a los Lluïsos de Gràcia. Bajo la apariencia de actividades culturales, mantenían viva la llama de la identidad. No buscaban solo la libertad política, sino preservar lo más valioso que tenían.' Escribe qué era eso tan valioso que ayudaron a preservar.",
+      "riddle": {
+        "question": "¿Qué ayudaron a preservar los ateneos como los Lluïsos de Gràcia durante la dictadura?",
+        "acceptedAnswers": ["la cultura catalana", "cultura catalana", "la cultura"],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Carrer dels Lluïsos de Gràcia",
+        "type": "Point",
+        "coordinates": [2.1546, 41.40711]
+      }
+    },
+    {
+      "order": 8,
+      "id": "tinta-08",
+      "type": "narrative",
+      "title": "Recompensa 4",
+      "description": "¡Correcto! Los Lluïsos de Gràcia fueron guardianes de la cultura catalana. A través del teatro, la música y las actividades culturales, mantuvieron viva la lengua y la identidad. Sin ellos, gran parte del patrimonio cultural habría desaparecido. Pero aún falta el corazón de la operación: La Sedeta.",
+      "location": {
+        "name": "Carrer dels Lluïsos de Gràcia",
+        "type": "Point",
+        "coordinates": [2.1546, 41.40711]
+      }
+    },
+    {
+      "order": 9,
+      "id": "tinta-09",
+      "type": "quiz",
+      "title": "Enigma 5: La máquina de la libertad",
+      "description": "El cronista encuentra una antigua fábrica: 'Estoy frente a La Sedeta. Durante años, obreros y militantes usaron una máquina para imprimir panfletos clandestinos a gran velocidad. Su nombre era la clave de su eficacia.' ¿Sabes cómo se llamaba esta máquina?",
+      "riddle": {
+        "question": "¿Cuál era el nombre del aparato de impresión rápida usado en La Sedeta?",
+        "acceptedAnswers": ["c", "ciclostil"],
+        "caseSensitive": false
+      },
+      "choices": ["A", "B", "C", "D"],
+      "options": [
+        "Una prensa tipográfica",
+        "Un telar mecánico",
+        "Un ciclostil",
+        "Una máquina de escribir"
+      ],
+      "location": {
+        "name": "La Sedeta",
+        "type": "Point",
+        "coordinates": [2.1556, 41.4060]
+      }
+    },
+    {
+      "order": 10,
+      "id": "tinta-10",
+      "type": "narrative",
+      "title": "Recompensa 5",
+      "description": "¡Exacto, un ciclostil! Esta máquina permitía reproducir cientos de copias de panfletos en minutos. Cada impresión era un acto de resistencia. Imagina a los obreros, tras su jornada, imprimiendo en secreto la palabra que liberaba conciencias. La Sedeta fue el corazón de esa revolución silenciosa.",
+      "location": {
+        "name": "La Sedeta",
+        "type": "Point",
+        "coordinates": [2.1556, 41.4060]
+      }
+    },
+    {
+      "order": 11,
+      "id": "tinta-11",
+      "type": "narrative",
+      "title": "Logro Final",
+      "description": "¡Hemos completado la crónica de la tinta y la libertad! Este viaje muestra que la resistencia más poderosa no siempre necesita armas; a veces basta con papel, tinta y valentía. Desde el campanario que marcaba las horas de la dictadura hasta La Sedeta, donde la palabra se convirtió en acción, hemos descubierto cómo una ciudad resistió con creatividad y coraje. Hoy, las mismas paredes que protegieron la palabra, ahora la celebran. Porque cada página impresa sigue siendo, en el fondo, un acto de libertad.",
+      "location": {
+        "name": "La Sedeta",
+        "type": "Point",
+        "coordinates": [2.1556, 41.4060]
+      }
+    }
+  ]
+}
+
+
