@@ -4,7 +4,7 @@
   "summary": "Descubre el contraste fascinante del Raval: del torno de los expósitos a los artistas bohemios del Bar Marsella, un viaje por la doble cara de su historia.",
   "theme": "historica",
   "neighborhood": "Raval",
-  "coverImageUrl": "https://res.cloudinary.com/rutalia/image/upload/v1699999999/rutas/barriochino/portada.jpg",
+  "coverImageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810322/xino-cover_toeqvo.jpg",
   "durationMinutes": 50,
   "tags": ["raval", "barcelona", "historia", "memoria", "modernismo", "bohemia"],
   "language": "es",
@@ -48,6 +48,9 @@
       "type": "riddle",
       "title": "Enigma 1.1: El Mecanismo Silencioso (Parte 1)",
       "description": "Crónica: 'He seguido un rastro de historias silenciosas hasta una plaza con nombre de escritor. Allí, incrustado en una pared, encontré un mecanismo que era a la vez un acto de amor y de desesperación.'",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810529/xino-pregunta-1_wzifbx.jpg"
+        },
       "riddle": {
         "question": "¿Cuál es el apellido del escritor que da nombre a la plaza donde se encuentra nuestro objetivo?",
         "acceptedAnswers": ["martorell"],
@@ -65,6 +68,9 @@
       "type": "location",
       "title": "Enigma 1.2: El Mecanismo Silencioso (Parte 2)",
       "description": "¡Genial, estás en la Plaça Vicenç Martorell! Busca el 'mecanismo silencioso' del que hablaba la crónica, ese curioso agujero en la pared. Activa tu GPS y colócate justo delante del torno de madera junto al número 17.",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810526/xino-pregunta-2_jeu3hb.jpg"
+        },
       "riddle": {
         "question": "¿Dónde está el mecanismo silencioso?",
         "acceptedAnswers": ["17"],
@@ -82,6 +88,9 @@
       "type": "narrative",
       "title": "Recompensa 1",
       "description": "¡Eso es, estáis en el lugar exacto! Este torno giratorio es un testigo mudo de incontables historias. Permitía a las madres dejar a sus bebés al cuidado de las monjas de forma anónima. Era un acto de amor y desesperación que salvó muchas vidas. Dejemos las sombras y busquemos al guardián de bronce en la Rambla del Raval.",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810325/xino-logro-1_nn87v4.png"
+        },
       "location": {
         "name": "Plaça de Vicenç Martorell",
         "type": "Point",
@@ -94,6 +103,9 @@
       "type": "quiz",
       "title": "Enigma 2.1: El Guardián de Bronce (Parte 1)",
       "description": "Crónica: 'En medio de las leyendas sombrías, me topo con un guardián inesperado. Un felino de bronce, gigantesco y bonachón, que parece sonreírle a la gente en una gran rambla moderna abierta en el corazón del barrio.'",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810731/xino-pregunta-3_svmtjn.jpg"
+        },
       "riddle": {
         "question": "¿Cómo se llama esa rambla moderna?",
         "acceptedAnswers": ["c", "rambla del raval"],
@@ -118,6 +130,9 @@
       "type": "photo",
       "title": "Enigma 2.2: El Guardián de Bronce (Parte 2)",
       "description": "El cronista quedó fascinado por el rostro de este guardián. Para demostrar que has encontrado su simpática cara, ¡sácale una foto a la escultura del Gato de Botero!",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810338/xino-pregunta-4_hlagnz.jpg"
+        },
       "riddle": {
         "question": "Haz una foto de la cara del Gato de Botero.",
         "acceptedAnswers": ["gato"],
@@ -139,6 +154,9 @@
       "type": "narrative",
       "title": "Recompensa 2",
       "description": "¡Esa es la cara! Este enorme felino de Fernando Botero es el símbolo de la renovación del barrio. Dicen que frotar sus testículos trae buena suerte. ¡Un secreto a voces!",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810337/xino-logro-2_tdquwm.png"
+        },
       "location": {
         "name": "Rambla del Raval",
         "type": "Point",
@@ -151,6 +169,9 @@
       "type": "riddle",
       "title": "Enigma 3.1: Lo Sagrado y lo Profano (Parte 1)",
       "description": "Has llegado al Monasterio de Sant Pau del Camp. Este lugar es único: uno de los templos más antiguos de Barcelona. Escribe el nombre de su estilo arquitectónico.",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810326/xino-pregunta-5_ijmbma.jpg"
+        },
       "riddle": {
         "question": "¿Cuál es el estilo arquitectónico del Monasterio de Sant Pau del Camp?",
         "acceptedAnswers": ["románico", "romanico"],
@@ -168,6 +189,9 @@
       "type": "quiz",
       "title": "Enigma 3.2: Lo Sagrado y lo Profano (Parte 2)",
       "description": "El monasterio tiene un nombre curioso: Sant Pau del Camp. ¿Por qué se llama ‘del Camp’?",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810356/xino-pregunta-6_f4f0de.jpg"
+        },
       "riddle": {
         "question": "¿Por qué se llama 'del Camp'?",
         "acceptedAnswers": ["a", "porque estaba rodeado de campos fuera de las murallas"],
@@ -192,6 +216,9 @@
       "type": "voice",
       "title": "Enigma 3.3: Lo Sagrado y lo Profano (Parte 3)",
       "description": "Además de iglesia, el monasterio tiene un espacio muy especial lleno de capiteles con figuras curiosas. Di en voz alta cómo se llama ese lugar.",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810360/xino-pregunta-7_ppd1ju.jpg"
+        },
       "riddle": {
         "question": "¿Cómo se llama el espacio interior del monasterio lleno de capiteles?",
         "acceptedAnswers": ["claustro"],
@@ -209,10 +236,31 @@
     },
     {
       "order": 10,
-      "id": "barriochino-10",
+      "id": "reward-3",
+      "type": "narrative",
+      "title": "Recompensa 3",
+      "description": "Exacte, el Monestir de Sant Pau del Camp! El seu nom significa 'del camp' perquè durant segles es va alçar aquí sol, fora de les muralles! Era un far de fe i saber a la frontera de la ciutat. Un exemple de com el sagrat ha conviscut amb el món més rude. Anem al següent punt: al Bar Marsella, a la cruïlla del carrer Sant Pau amb el carrer de Sant Ramon!",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810360/xino-logro-3_ayfqrq.png"
+        },
+      "location": {
+        "name": "Monestir de Sant Pau del Camp (Sant Pau, 99)",
+        "type": "Point",
+        "coordinates": [
+          2.1746,
+          41.3787
+        ]
+      }
+    },
+    {
+      "order": 11,
+      "id": "barriochino-11",
       "type": "riddle",
       "title": "Enigma 4.1: El Secreto del Hada Verde (Parte 1)",
       "description": "El cronista menciona una musa líquida famosa por su color y su efecto inspirador. ¿Cuál era su apodo?",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810368/xino-pregunta-8_tdnolp.webp"
+        },
       "riddle": {
         "question": "¿Cuál era el apodo del licor verde asociado al Bar Marsella?",
         "acceptedAnswers": ["c", "el hada verde"],
@@ -232,11 +280,14 @@
       }
     },
     {
-      "order": 11,
-      "id": "barriochino-11",
+      "order": 12,
+      "id": "barriochino-12",
       "type": "riddle",
       "title": "Enigma 4.2: El Escritor Bohemio",
       "description": "Un famoso escritor americano, autor de 'El viejo y el mar', también era cliente habitual del Marsella. ¿Cuál es su apellido?",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810383/xino-pregunta-9_coqbhu.jpg"
+        },
       "riddle": {
         "question": "¿Cuál es el apellido del autor americano cliente del Bar Marsella?",
         "acceptedAnswers": ["hemingway"],
@@ -249,11 +300,14 @@
       }
     },
     {
-      "order": 12,
-      "id": "barriochino-12",
+      "order": 13,
+      "id": "barriochino-13",
       "type": "riddle",
       "title": "Enigma 4.3: El Arquitecto del Modernismo",
       "description": "El cronista menciona a un arquitecto famoso, creador de la Sagrada Familia y cliente habitual del Marsella. ¿Cuál es su apellido?",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810362/xino-pregunta-10_wf0yvs.jpg"
+        },
       "riddle": {
         "question": "¿Qué arquitecto creador de la Sagrada Familia era cliente habitual del Marsella?",
         "acceptedAnswers": ["gaudí", "gaudi"],
@@ -266,11 +320,32 @@
       }
     },
     {
-      "order": 13,
-      "id": "barriochino-13",
+      "order": 14,
+      "id": "reward-4",
+      "type": "narrative",
+      "title": "Recompensa 4",
+      "description": "Correcte, era Antoni Gaudí! Diuen que ell, com molts altres artistes de la talla de Picasso o Dalí, era un habitual d'aquest temple bohemi. La 'Fada Verda' segueix un ritual amb aigua, terròs de sucre i una forquilla. Anem al punt final de la crònica: als jardins propers de l'Antic Hospital de la Santa Creu!",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810386/xino-logro-4_o0yseb.png"
+        },
+      "location": {
+        "name": "Bar Marsella (Sant Pau, 65)",
+        "type": "Point",
+        "coordinates": [
+          2.1738,
+          41.3794
+        ]
+      }
+    },
+    {
+      "order": 15,
+      "id": "barriochino-15",
       "type": "location",
       "title": "Enigma 5.1: El Corazón de la Crónica (Parte 1)",
       "description": "Dirígete a los jardines del Antiguo Hospital de la Santa Creu. Busca la entrada principal en el Carrer de l'Hospital.",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810552/xino-pregunta-11_ynxg8k.jpg"
+        },
       "riddle": {
         "question": "¿Por qué calle se accede a los jardines del Antiguo Hospital de la Santa Creu?",
         "acceptedAnswers": ["carrer de l'hospital", "hospital"],
@@ -283,11 +358,14 @@
       }
     },
     {
-      "order": 14,
-      "id": "barriochino-14",
+      "order": 16,
+      "id": "barriochino-16",
       "type": "photo",
       "title": "Enigma 5.2: Los Arcos Góticos",
       "description": "Busca los arcos ojivales en las ventanas y galerías del Hospital de la Santa Creu. Sácale una foto a uno de ellos.",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810541/xino-pregunta-12_o6dy6j.jpg"
+        },
       "riddle": {
         "question": "Haz una foto de un arco ojival del Hospital de la Santa Creu.",
         "acceptedAnswers": ["arco gótico", "ojiva"],
@@ -304,11 +382,14 @@
       }
     },
     {
-      "order": 15,
-      "id": "barriochino-15",
+      "order": 17,
+      "id": "barriochino-17",
       "type": "quiz",
       "title": "Enigma 5.3: El Artista que Murió Aquí",
       "description": "Este lugar acogió a ricos y pobres. Aquí murió uno de los genios del modernismo. ¿Quién fue?",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810565/xino-pregunta-13_mdkijd.jpg"
+        },
       "riddle": {
         "question": "¿Qué artista murió en el Hospital de la Santa Creu?",
         "acceptedAnswers": ["c", "gaudí", "gaudi"],
@@ -323,8 +404,8 @@
       }
     },
     {
-      "order": 16,
-      "id": "barriochino-16",
+      "order": 18,
+      "id": "barriochino-18",
       "type": "voice",
       "title": "Enigma 5.4: La Palabra Final",
       "description": "Desde los bebés del torno hasta los genios modernistas, todos pasaron por aquí. Di en voz alta la palabra que describe la función de este lugar durante siglos.",
@@ -344,11 +425,32 @@
       }
     },
     {
-      "order": 17,
-      "id": "barriochino-17",
+      "order": 19,
+      "id": "barriochino-19",
+      "type": "narrative",
+      "title": "Recompensa 5",
+      "description": "Justa aquesta paraula: HOSPITAL! Has arribat al cor de la crònica. Aquest magnífic edifici gòtic va ser durant més de 500 anys el principal Hospital de Barcelona. Per aquí van passar totes les ànimes de la ciutat. És el lloc perfecte per tancar el cercle, ja que entre els seus murs es guarden els ecos de totes les històries, les lluminoses i les fosques, que conformen el veritable llegat del Raval.",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810387/xino-logro-5_wwzb1h.png"
+        },
+      "location": {
+        "name": "Antic Hospital de la Santa Creu (Jardins)",
+        "type": "Point",
+        "coordinates": [
+          2.1712,
+          41.3813
+        ]
+      }
+    },
+    {
+      "order": 20,
+      "id": "barriochino-20",
       "type": "narrative",
       "title": "Recompensa Final",
       "description": "Este viaje por el Raval ha desvelado su fascinante 'doble cara': desde la inspiración bohemia de Gaudí y el Gato de Botero, hasta el drama del torno de expósitos y la paz del monasterio románico. Todas las historias convergen aquí, en el Antiguo Hospital, el corazón del barrio.",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810394/xino-logro-final_kxufym.png"
+        },
       "location": {
         "name": "Antiguo Hospital de la Santa Creu",
         "type": "Point",
