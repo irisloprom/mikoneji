@@ -4,7 +4,7 @@
   "summary": "Explora el simbolismo del número 33 y descubre el misterio del beso que selló una traición.",
   "theme": "historia",
   "neighborhood": "Sagrada Família (virtual)",
-  "coverImageUrl": "assets/ruta0_beso_judas/cover.jpg",
+  "coverImageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760174513/judas-cover_vqpsgx.jpg",
   "durationMinutes": 15,
   "tags": [
     "tutorial",
@@ -25,6 +25,9 @@
       "type": "riddle",
       "title": "Enigma 1 — Primera fila",
       "description": "¿Cuál es el resultado de la suma de todos los números de la primera fila del cuadrado mágico?",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548550/judas-pregunta-1_1_rlg6ao.jpg"
+        },
       "riddle": {
         "question": "Suma de la primera fila",
         "acceptedAnswers": [
@@ -45,13 +48,19 @@
       "order": 2,
       "type": "narrative",
       "title": "Recompensa 1",
-      "description": "¡Así es! La suma de los números es 33. Es un número muy especial para la religión católica: Jesús murió a los 33 años, crucificado. Su sacrificio representa la redención de los pecados de la humanidad, y es conmemorado cada Semana Santa."
+      "description": "¡Así es! La suma de los números es 33. Es un número muy especial para la religión católica: Jesús murió a los 33 años, crucificado. Su sacrificio representa la redención de los pecados de la humanidad, y es conmemorado cada Semana Santa.",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548851/judas-recompensa-1_uz8nt7.jpg"
+        }
     },
     {
       "order": 3,
       "type": "riddle",
       "title": "Enigma 2 — Segunda fila (voz o texto)",
       "description": "Di (o escribe) el resultado de la suma de los números de la segunda fila.",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548549/judas-pregunta-2_knbyfi.jpg"
+        },
       "riddle": {
         "question": "Suma de la segunda fila",
         "acceptedAnswers": [
@@ -72,13 +81,19 @@
       "order": 4,
       "type": "narrative",
       "title": "Recompensa 2",
-      "description": "¡Efectivamente, también 33! Si sumamos las filas, el resultado siempre es 33. El Salmo 33 alaba a Dios por su poder, y algunos lo relacionan con los milagros de Jesús."
+      "description": "¡Efectivamente, también 33! Si sumamos las filas, el resultado siempre es 33. El Salmo 33 alaba a Dios por su poder, y algunos lo relacionan con los milagros de Jesús.",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760174509/judas-recompensa-2_o8ovgr.jpg"
+        }
     },
     {
       "order": 5,
       "type": "quiz",
       "title": "Enigma 3 — ¿Y las columnas?",
       "description": "¿Qué número da la suma de los números de una misma columna?",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548549/judas-pregunta-3_lsu6wg.jpg"
+        },
       "riddle": {
         "question": "Suma de una columna",
         "acceptedAnswers": [
@@ -100,13 +115,19 @@
       "order": 6,
       "type": "narrative",
       "title": "Recompensa 3",
-      "description": "¡Correcto! También las columnas (y las diagonales) suman 33. A esto se le llama Cuadrado Mágico. El más antiguo conocido es el Lo Shu, originado en la antigua China."
+      "description": "¡Correcto! También las columnas (y las diagonales) suman 33. A esto se le llama Cuadrado Mágico. El más antiguo conocido es el Lo Shu, originado en la antigua China.",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548595/judas-recompensa-3_fdfrz4.png"
+        }
     },
     {
       "order": 7,
       "type": "riddle",
       "title": "Enigma 4 — Casilla faltante",
       "description": "¿Qué número falta para completar el cuadrado mágico?",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548562/judas-pregunta-4_nb48gl.png"
+        },
       "riddle": {
         "question": "Número faltante",
         "acceptedAnswers": [
@@ -126,13 +147,19 @@
       "order": 8,
       "type": "narrative",
       "title": "Recompensa 4",
-      "description": "¡Correcto! ¡La respuesta es 7! Los cuadrados mágicos con repetición, como este, también se conocen como 'semánticos'."
+      "description": "¡Correcto! ¡La respuesta es 7! Los cuadrados mágicos con repetición, como este, también se conocen como 'semánticos'.",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760174510/judas-recompensa-4_yrjdqt.png"
+        }
     },
     {
       "order": 9,
       "type": "quiz",
       "title": "Enigma 5 — El beso de traición",
       "description": "¿Cómo se llama la persona que traicionó a Jesús con un beso?",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548749/judas-pregunta-5_r8odhh.jpg"
+        },
       "riddle": {
         "question": "¿Quién traicionó a Jesús con un beso?",
         "acceptedAnswers": [
@@ -161,7 +188,10 @@
       "order": 11,
       "type": "narrative",
       "title": "Recompensa Final",
-      "description": "¡Hemos desvelado la magia del 33! Cuadrados mágicos, simbolismo bíblico y un beso de traición se unen en esta historia. ¿Tu beso será de amor… o de traición?"
+      "description": "¡Hemos desvelado la magia del 33! Cuadrados mágicos, simbolismo bíblico y un beso de traición se unen en esta historia. ¿Tu beso será de amor… o de traición?",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548571/judas-logro-final_b9naeh.png"
+        }
     }
   ]
 }
