@@ -46,7 +46,8 @@ if (!files.length) {
 // === Esquemas JSON ===
 const GeoPoint = z.object({
   type: z.literal('Point'),
-  coordinates: z.tuple([z.number(), z.number()]) // [lng, lat]
+  coordinates: z.tuple([z.number(), z.number()]), // [lng, lat]
+  name: z.string().optional()
 });
 
 const MediaJson = z.object({
@@ -55,16 +56,22 @@ const MediaJson = z.object({
   videoUrl: z.string().url().optional()
 }).partial().optional();
 
+const AccessibilityJson = z.object({
+  type: z.string().optional(),
+  description: z.string().optional()
+}).optional();
+
 const RiddleJson = z.object({
-  prompt: z.string().optional(),   // preferente
-  question: z.string().optional(), // alias legacy
+  prompt: z.string().optional(),
+  question: z.string().optional(),
   acceptedAnswers: z.array(z.string()).optional(),
   caseSensitive: z.boolean().optional()
 }).partial().optional();
 
 const MilestoneJson = z.object({
   order: z.number().int().nonnegative().optional(),
-  type: z.enum(['narrative', 'location', 'riddle', 'photo', 'quiz', 'checkpoint']),
+  id: z.string().optional(),
+  type: z.enum(['narrative', 'location', 'riddle', 'photo', 'quiz', 'voice', 'camera', 'gps', 'checkpoint']),
   title: z.string(),
   description: z.string().optional(),
   media: MediaJson,
@@ -75,24 +82,45 @@ const MilestoneJson = z.object({
   timeLimitSec: z.number().int().optional(),
   points: z.number().int().optional(),
   hintPenalty: z.number().int().optional(),
-  requiredToComplete: z.boolean().optional()
+  requiredToComplete: z.boolean().optional(),
+  accessibility: AccessibilityJson,
+  choices: z.array(z.string()).optional(),
+  options: z.array(z.string()).optional()
 });
+
+const RequiresJson = z.object({
+  gps: z.boolean().optional(),
+  camera: z.boolean().optional(),
+  voice: z.boolean().optional()
+}).partial().optional();
+
+const AnalyticsJson = z.object({
+  category: z.string().optional(),
+  kpiTags: z.array(z.string()).optional()
+}).partial().optional();
 
 const StoryJson = z.object({
   title: z.string(),
   slug: z.string().optional(),
   summary: z.string().optional(),
-  theme: z.enum(['esoteric','queer','history','romance','legends','custom']).optional(),
+  theme: z.string().optional(),
   neighborhood: z.string().optional(),
   coverImageUrl: z.string().url().optional(),
   durationMinutes: z.number().int().optional(),
-  estimatedMinutes: z.number().int().optional(), // nuevo (alias)
-  difficulty: z.enum(['easy','medium','hard']).optional(), // nuevo
+  estimatedMinutes: z.number().int().optional(),
+  estimatedSteps: z.number().int().optional(),
+  difficulty: z.enum(['easy', 'medium', 'hard']).optional(),
+  language: z.string().optional(),
+  createdBy: z.string().optional(),
+  updatedAt: z.coerce.date().optional(),
+  version: z.string().optional(),
+  requires: RequiresJson,
+  analytics: AnalyticsJson,
   tags: z.array(z.string()).optional(),
-  status: z.enum(['draft','published','archived']).optional(),
+  status: z.enum(['draft', 'published', 'archived']).optional(),
   publishedAt: z.coerce.date().optional(),
   startLocation: GeoPoint.optional(),
-  center: GeoPoint.optional(), // nuevo
+  center: GeoPoint.optional(),
   milestones: z.array(MilestoneJson).default([])
 });
 
@@ -101,42 +129,35 @@ type StoryInput = z.infer<typeof StoryJson>;
 function normalizeAnswers(arr?: string[], caseSensitive?: boolean) {
   if (!arr?.length) return [];
   const trimmed = arr.map((s) => s.trim()).filter(Boolean);
-  // Guardamos tal cual; la comparación la gestiona el backend (matchesAny).
   return trimmed;
 }
 
 function milestoneToDoc(m: z.infer<typeof MilestoneJson>, idx: number, storyId: any) {
-  // Riddle: compatibilidad prompt/question
   const prompt = m.riddle?.prompt ?? m.riddle?.question;
   const acceptedAnswers = normalizeAnswers(m.riddle?.acceptedAnswers, m.riddle?.caseSensitive);
-
-  // Radio por defecto para location
-  const radius = m.type === 'location'
-    ? (m.proximityRadiusM ?? 50)
-    : m.proximityRadiusM;
-
-  if (m.type === 'location' && !m.location) {
-    console.warn('⚠️  Milestone tipo "location" sin campo "location". Archivo idx=', idx);
-  }
+  const radius = m.type === 'location' ? (m.proximityRadiusM ?? 50) : m.proximityRadiusM;
 
   return {
     story: storyId,
     order: m.order ?? idx,
+    id: m.id,
     title: m.title,
     description: m.description,
     type: m.type,
     media: m.media,
     location: m.location,
     proximityRadiusM: radius,
+    accessibility: m.accessibility,
     riddle: m.riddle
       ? {
           prompt,
-          question: undefined, // normalizamos a prompt
           acceptedAnswers,
           caseSensitive: m.riddle.caseSensitive ?? false
         }
       : undefined,
     clues: m.clues,
+    choices: m.choices,
+    options: m.options,
     timeLimitSec: m.timeLimitSec,
     points: m.points,
     hintPenalty: m.hintPenalty,
@@ -158,12 +179,19 @@ async function importOne(filePath: string) {
     coverImageUrl: json.coverImageUrl,
     durationMinutes: json.durationMinutes,
     estimatedMinutes: json.estimatedMinutes,
+    estimatedSteps: json.estimatedSteps ?? json.milestones.length,
     difficulty: json.difficulty,
+    language: json.language ?? 'es',
+    createdBy: json.createdBy ?? 'Rutalia Team',
+    updatedAt: json.updatedAt ?? new Date(),
+    version: json.version ?? '1.0',
+    requires: json.requires ?? { gps: false, camera: false, voice: false },
+    analytics: json.analytics ?? { category: 'educational', kpiTags: [] },
     tags: json.tags,
     status: json.status ?? 'draft',
     publishedAt: json.status === 'published'
       ? (json.publishedAt ?? new Date())
-      : json.publishedAt, // si es draft, lo ignorará el modelo
+      : json.publishedAt,
     startLocation: json.startLocation,
     center: json.center
   };
@@ -185,13 +213,11 @@ async function importOne(filePath: string) {
     return;
   }
 
-  // Historia existe → según modo
-  console.log(`ℹ️ Historia ya existe: ${slug}  (mode=${mode})`);
+  console.log(`ℹ️ Historia ya existe: ${slug} (mode=${mode})`);
 
   if (mode === 'skip') return;
 
   if (!dryRun) {
-    // upsert de datos básicos
     Object.assign(existing, storyData);
     await existing.save();
   }

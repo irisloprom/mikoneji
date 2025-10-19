@@ -5,86 +5,113 @@ import { connectDB } from '../config/db.js';
 import { Story } from '../models/Story.js';
 import { Milestone } from '../models/Milestone.js';
 
-const outDir = process.argv[2] || 'exports';
+// === CLI args ===
+// Ejemplos:
+//   ts-node src/scripts/export-stories.ts --slug barrio-chino
+//   ts-node src/scripts/export-stories.ts --all
+// Flags:
+//   --dir <carpeta destino> (por defecto ./exports)
+const args = process.argv.slice(2);
+let exportAll = false;
+let slugs: string[] = [];
+let exportDir = './exports';
 
-/**
- * Limpia campos internos de Mongoose y devuelve JSON listo para exportar.
- */
-function cleanDoc<T extends Record<string, any>>(doc: T) {
-  const clone = { ...doc };
-  delete (clone as any)._id;
-  delete (clone as any).__v;
-  delete (clone as any).createdAt;
-  delete (clone as any).updatedAt;
-  return clone;
+for (let i = 0; i < args.length; i++) {
+  const a = args[i];
+  if (a === '--slug' && args[i + 1]) {
+    slugs.push(args[++i]);
+  } else if (a === '--all') {
+    exportAll = true;
+  } else if (a === '--dir' && args[i + 1]) {
+    exportDir = args[++i];
+  }
 }
 
-/**
- * Convierte un milestone del modelo a JSON compatible con el import.
- */
-function formatMilestone(m: any) {
-  return {
-    order: m.order,
-    type: m.type,
-    title: m.title,
-    description: m.description,
-    media: m.media,
-    location: m.location,
-    proximityRadiusM: m.proximityRadiusM,
-    // normaliza riddle: usa prompt y omite question duplicada
-    riddle: m.riddle
-      ? {
-          prompt: m.riddle.prompt ?? m.riddle.question,
-          acceptedAnswers: m.riddle.acceptedAnswers ?? [],
-          caseSensitive: m.riddle.caseSensitive ?? false,
-        }
-      : undefined,
-    clues: m.clues,
-    timeLimitSec: m.timeLimitSec,
-    points: m.points,
-    hintPenalty: m.hintPenalty,
-    requiredToComplete: m.requiredToComplete,
-  };
+if (!exportAll && !slugs.length) {
+  console.error('Uso: --slug <nombre> | --all [--dir <carpeta>]');
+  process.exit(1);
 }
 
-async function run() {
+// === Función principal ===
+async function exportStories() {
   await connectDB();
-  fs.mkdirSync(outDir, { recursive: true });
 
-  const stories = await Story.find().lean();
-  console.log(`📤 Exportando ${stories.length} historias...`);
-
-  for (const s of stories) {
-    const ms = await Milestone.find({ story: s._id }).sort({ order: 1 }).lean();
-
-    const dump = {
-      title: s.title,
-      slug: s.slug,
-      summary: s.summary,
-      theme: s.theme,
-      neighborhood: s.neighborhood,
-      coverImageUrl: s.coverImageUrl,
-      durationMinutes: s.durationMinutes,
-      estimatedMinutes: s.estimatedMinutes,
-      difficulty: s.difficulty,
-      tags: s.tags,
-      status: s.status,
-      publishedAt: s.publishedAt,
-      startLocation: s.startLocation,
-      center: s.center,
-      milestones: ms.map(formatMilestone),
-    };
-
-    const file = path.join(outDir, `${s.slug}.json`);
-    fs.writeFileSync(file, JSON.stringify(dump, null, 2), 'utf8');
-    console.log('⬇️  Exportado', file);
+  const query = exportAll ? {} : { slug: { $in: slugs } };
+  const stories = await Story.find(query);
+  if (!stories.length) {
+    console.log('⚠️ No se encontraron historias para exportar.');
+    process.exit(0);
   }
 
-  console.log('\n✅ Export completo');
+  if (!fs.existsSync(exportDir)) fs.mkdirSync(exportDir, { recursive: true });
+
+  for (const story of stories) {
+    const milestones = await Milestone.find({ story: story._id }).sort({ order: 1 }).lean();
+
+    const storyJson = {
+      title: story.title,
+      slug: story.slug,
+      summary: story.summary,
+      theme: story.theme,
+      neighborhood: story.neighborhood,
+      coverImageUrl: story.coverImageUrl,
+      durationMinutes: story.durationMinutes,
+      estimatedMinutes: story.estimatedMinutes,
+      estimatedSteps: story.estimatedSteps ?? milestones.length,
+      difficulty: story.difficulty,
+      language: story.language ?? 'es',
+      createdBy: story.createdBy ?? 'Rutalia Team',
+      updatedAt: story.updatedAt ?? new Date(),
+      version: story.version ?? '1.0',
+      requires: story.requires ?? { gps: false, camera: false, voice: false },
+      analytics: story.analytics ?? { category: 'educational', kpiTags: [] },
+      tags: story.tags ?? [],
+      status: story.status ?? 'draft',
+      publishedAt: story.publishedAt,
+      startLocation: story.startLocation ?? {
+        type: 'Point',
+        coordinates: [0, 0],
+        name: 'Ubicación no especificada'
+      },
+      center: story.center,
+      milestones: milestones.map((m: any) => ({
+        order: m.order,
+        id: m.id,
+        type: m.type,
+        title: m.title,
+        description: m.description,
+        media: m.media ?? null,
+        location: m.location ?? null,
+        proximityRadiusM: m.proximityRadiusM,
+        riddle: m.riddle
+          ? {
+              prompt: m.riddle.prompt,
+              acceptedAnswers: m.riddle.acceptedAnswers,
+              caseSensitive: m.riddle.caseSensitive ?? false
+            }
+          : undefined,
+        clues: m.clues ?? [],
+        choices: m.choices ?? [],
+        options: m.options ?? [],
+        accessibility: m.accessibility ?? null,
+        points: m.points ?? 0,
+        hintPenalty: m.hintPenalty ?? 0,
+        timeLimitSec: m.timeLimitSec ?? null,
+        requiredToComplete: m.requiredToComplete ?? true
+      }))
+    };
+
+    const filename = `${story.slug}_${story.language || 'es'}.json`;
+    const filepath = path.join(exportDir, filename);
+    fs.writeFileSync(filepath, JSON.stringify(storyJson, null, 2), 'utf8');
+    console.log(`💾 Exportado: ${filename}`);
+  }
+
+  console.log(`\n✅ Exportación completada en ${path.resolve(exportDir)}`);
   process.exit(0);
 }
 
-run().catch((e) => {
-  console.error(e);
+exportStories().catch((err) => {
+  console.error('❌ Error exportando historias:', err);
   process.exit(1);
 });

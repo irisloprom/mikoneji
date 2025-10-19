@@ -10,6 +10,9 @@
     "build": "tsc --project tsconfig.json",
     "dev": "tsx watch src/index.ts",
     "start": "node ./dist/index.js",
+    "stories:import": "ts-node src/scripts/import-stories.ts --dir src/data/stories --mode replace",
+    "stories:export": "ts-node src/scripts/export-stories.ts exports",
+    "stories:export:all": "ts-node src/scripts/export-stories.ts --all --dir exports",
     "clean": "rimraf dist"
   },
   "dependencies": {
