@@ -1,18 +1,18 @@
 {
-  "title": "La Tinta de la Llibertat",
-  "slug": "tinta-de-la-llibertat",
-  "summary": "Descubre cómo la tinta se convirtió en un arma de resistencia en la Gràcia clandestina: la historia de quienes imprimieron libertad en papel.",
-  "theme": "historica",
-  "neighborhood": "Gràcia",
-  "coverImageUrl": "https://res.cloudinary.com/rutalia/image/upload/v1699999999/rutas/tinta_llibertat/portada.jpg",
-  "durationMinutes": 50,
-  "tags": ["gracia", "historia", "memoria", "catalunya", "libertad", "resistencia"],
+  "title": "La Ruta de la Valentía",
+  "slug": "ruta-de-la-valentia",
+  "summary": "Explora los espacios de libertad que la comunidad LGTBI creó clandestinamente en una Barcelona que les daba la espalda.",
+  "theme": "queer",
+  "neighborhood": "Ciutat Vella",
+  "coverImageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810392/valentia_cover_g6kkcs.jpg",
+  "durationMinutes": 60,
+  "tags": ["lgtbi", "resistencia", "memoria", "barcelona", "raval", "derechos"],
   "language": "es",
   "difficulty": "medium",
-  "estimatedSteps": 5,
+  "estimatedSteps": 6,
   "createdBy": "Rutalia Team",
   "updatedAt": "2025-10-13T12:00:00.000Z",
-  "version": "1.0",
+  "version": "1.2",
   "requires": {
     "gps": true,
     "camera": true,
@@ -20,205 +20,217 @@
   },
   "analytics": {
     "category": "cultural-memory",
-    "kpiTags": ["heritage", "freedom", "education"]
+    "kpiTags": ["engagement", "heritage", "inclusivity"]
   },
   "status": "published",
   "publishedAt": "2025-10-01T10:00:00.000Z",
   "startLocation": {
     "type": "Point",
-    "coordinates": [2.1577, 41.40011],
-    "name": "Plaça de la Vila de Gràcia"
+    "coordinates": [2.172, 41.382],
+    "name": "Font de Canaletes - La Rambla"
   },
   "milestones": [
     {
       "order": 0,
-      "id": "tinta-00",
+      "id": "valentia-00",
       "type": "narrative",
       "title": "Introducción",
-      "description": "¡Explorador, he encontrado otra crónica perdida! Esta vez, nuestro cronista se adentra en las plazas y callejuelas de Gràcia, no para seguir a un personaje, sino a una idea: la libertad impresa en papel. Durante la dictadura, Gràcia se convirtió en un taller clandestino donde valientes imprimían en catalán y difundían propaganda prohibida. ¿Listo para descubrir los secretos que se escondían tras la tinta? ¡Nuestra historia empieza en el corazón de la Vila, en la Plaça de la Vila de Gràcia!",
+      "description": "¡Explorador, qué suerte! He encontrado un fajo de notas del cronista que parecen casi un mapa secreto. No habla de tesoros de oro, sino de algo mucho más valioso: los espacios de libertad que la comunidad LGTBI se labró en una Barcelona que les daba la espalda. Durante décadas, tuvieron que inventar códigos, refugios y formas de ser visibles sin ser vistos. ¿Me acompañas a seguir esta ruta de la valentía? ¡Empezamos en la Font de Canaletes, en La Rambla!",
       "location": {
-        "name": "Plaça de la Vila de Gràcia",
+        "name": "La Rambla - Font de Canaletes",
         "type": "Point",
-        "coordinates": [2.1577, 41.40011]
-      }
+        "coordinates": [2.17025, 41.385222]
+      },
+      "media": {
+        "image1Url": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810392/valentia-pregunta-1_uj3bv3.webp"
+        }
     },
     {
       "order": 1,
-      "id": "tinta-01",
-      "type": "photo",
-      "title": "Enigma 1: El símbolo de Gràcia",
-      "description": "El cronista observa el centro neurálgico del barrio y escribe: 'Aquí, en la Plaça de la Vila, todo parece normal. El imponente campanario marca las horas oficiales, el tiempo del régimen. Pero en los pisos de alrededor, otro tiempo latía en secreto, el de la resistencia. Mientras la torre representaba el poder visible, la gente de Gràcia se convirtió en el auténtico símbolo de la identidad del barrio.' Saca una foto del símbolo que representa la verdadera identidad de Gràcia: la torre del campanario.",
-      "riddle": {
-        "question": "Haz una foto del campanario de la Plaça de la Vila de Gràcia.",
-        "acceptedAnswers": ["campanario", "reloj"],
-        "caseSensitive": false
-      },
-      "accessibility": {
-        "type": "text",
-        "description": "Si no puedes hacer la foto, escribe qué objeto corona la torre y marca el tiempo oficial: RELOJ."
-      },
-      "location": {
-        "name": "Plaça de la Vila de Gràcia",
-        "type": "Point",
-        "coordinates": [2.1577, 41.40011]
-      }
-    },
-    {
-      "order": 2,
-      "id": "tinta-02",
-      "type": "narrative",
-      "title": "Recompensa 1",
-      "description": "¡Esa es la torre! Mientras su reloj marcaba un tiempo de silencio impuesto, en las casas cercanas se organizaba el 'ruido': las imprentas clandestinas. Usando ciclostiles y tipografías portátiles, producían pasquines, revistas y libros en catalán. Era un trabajo arriesgado que mantenía viva una cultura prohibida. Sigamos hacia la Plaça del Diamant, donde la literatura se convirtió en resistencia.",
-      "location": {
-        "name": "Plaça de la Vila de Gràcia",
-        "type": "Point",
-        "coordinates": [2.1577, 41.40011]
-      }
-    },
-    {
-      "order": 3,
-      "id": "tinta-03",
-      "type": "voice",
-      "title": "Enigma 2: La voz de Colometa",
-      "description": "El cronista llega a la Plaça del Diamant y escucha ecos de una voz literaria: 'Su historia, escrita en el exilio y en catalán, era justo el tipo de obra que se imprimía en secreto por estas calles. Recordar su nombre es honrarla a ella y a todos los que lucharon para que su voz no se apagara.' Di en voz alta el nombre por el que todos conocían a la protagonista de 'La Plaça del Diamant'.",
-      "riddle": {
-        "question": "¿Cuál es el nombre de la protagonista de 'La Plaça del Diamant'?",
-        "acceptedAnswers": ["colometa"],
-        "caseSensitive": false
-      },
-      "accessibility": {
-        "type": "text",
-        "description": "Escribe la respuesta si no puedes usar el micrófono: COLOMETA."
-      },
-      "location": {
-        "name": "Plaça del Diamant",
-        "type": "Point",
-        "coordinates": [2.1559, 41.40408]
-      }
-    },
-    {
-      "order": 4,
-      "id": "tinta-04",
-      "type": "narrative",
-      "title": "Recompensa 2",
-      "description": "¡Has invocado a Colometa! La novela de Mercè Rodoreda simboliza la resistencia cultural que defendían quienes imprimían en la clandestinidad. Publicar o distribuir un libro en catalán era un acto de valentía. Ahora, sigamos el rastro de esas 'formiguetes' que movían las palabras por las calles: pon rumbo a la Calle de Verdi.",
-      "location": {
-        "name": "Plaça del Diamant",
-        "type": "Point",
-        "coordinates": [2.1559, 41.40408]
-      }
-    },
-    {
-      "order": 5,
-      "id": "tinta-05",
-      "type": "location",
-      "title": "Enigma 3: Las hormiguitas de Verdi",
-      "description": "El cronista rinde homenaje a los distribuidores anónimos: 'Estoy en la Calle de Verdi, un hervidero de gente. Aquí actuaban como 'formiguetes' (hormiguitas), repartiendo panfletos de mano en mano, en bares o cines. Su éxito dependía de pasar desapercibidos.' Activa tu GPS y colócate en el corazón de esta red de distribución.",
-      "riddle": {
-        "question": "Activa el GPS o escribe el nombre de una de las salas de cine de esta calle.",
-        "acceptedAnswers": ["cines verdi", "verdi"],
-        "caseSensitive": false
-      },
-      "accessibility": {
-        "type": "text",
-        "description": "Si el GPS falla, escribe el nombre de una sala de cine de la calle: CINES VERDI."
-      },
-      "location": {
-        "name": "Carrer de Verdi",
-        "type": "Point",
-        "coordinates": [2.1546, 41.40491]
-      }
-    },
-    {
-      "order": 6,
-      "id": "tinta-06",
-      "type": "narrative",
-      "title": "Recompensa 3",
-      "description": "¡Estás en plena zona de operaciones! Distribuir material prohibido era arriesgado. Figuras como Octavi Pellissa del PSUC coordinaron redes clandestinas, pero el mérito fue de cientos de anónimos. Cines, tiendas y portales eran puntos de paso para la libertad impresa. Dirígete ahora al Carrer de los Lluïsos de Gràcia.",
-      "location": {
-        "name": "Carrer de Verdi",
-        "type": "Point",
-        "coordinates": [2.1546, 41.40491]
-      }
-    },
-    {
-      "order": 7,
-      "id": "tinta-07",
-      "type": "riddle",
-      "title": "Enigma 4: Guardianes de la cultura",
-      "description": "El cronista escribe: 'Estoy frente a los Lluïsos de Gràcia. Bajo la apariencia de actividades culturales, mantenían viva la llama de la identidad. No buscaban solo la libertad política, sino preservar lo más valioso que tenían.' Escribe qué era eso tan valioso que ayudaron a preservar.",
-      "riddle": {
-        "question": "¿Qué ayudaron a preservar los ateneos como los Lluïsos de Gràcia durante la dictadura?",
-        "acceptedAnswers": ["la cultura catalana", "cultura catalana", "la cultura"],
-        "caseSensitive": false
-      },
-      "location": {
-        "name": "Carrer dels Lluïsos de Gràcia",
-        "type": "Point",
-        "coordinates": [2.1546, 41.40711]
-      }
-    },
-    {
-      "order": 8,
-      "id": "tinta-08",
-      "type": "narrative",
-      "title": "Recompensa 4",
-      "description": "¡Correcto! Los Lluïsos de Gràcia fueron guardianes de la cultura catalana. A través del teatro, la música y las actividades culturales, mantuvieron viva la lengua y la identidad. Sin ellos, gran parte del patrimonio cultural habría desaparecido. Pero aún falta el corazón de la operación: La Sedeta.",
-      "location": {
-        "name": "Carrer dels Lluïsos de Gràcia",
-        "type": "Point",
-        "coordinates": [2.1546, 41.40711]
-      }
-    },
-    {
-      "order": 9,
-      "id": "tinta-09",
+      "id": "valentia-01",
       "type": "quiz",
-      "title": "Enigma 5: La máquina de la libertad",
-      "description": "El cronista encuentra una antigua fábrica: 'Estoy frente a La Sedeta. Durante años, obreros y militantes usaron una máquina para imprimir panfletos clandestinos a gran velocidad. Su nombre era la clave de su eficacia.' ¿Sabes cómo se llamaba esta máquina?",
+      "title": "Enigma 1: El Lenguaje del Abanico",
+      "description": "Crónica: 'Mi crónica empieza aquí, en La Rambla. Durante la dictadura, el paseo era un ritual. Ver y ser visto. Pero ¿cómo reconocer a un igual sin ponerse en peligro? La respuesta estaba en las manos: un abanico. Según cómo se sostenía, se enviaba un mensaje secreto que solo los iniciados entendían.'",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810397/valentia-pregunta-2_wwmxmv.jpg"
+        },
       "riddle": {
-        "question": "¿Cuál era el nombre del aparato de impresión rápida usado en La Sedeta?",
-        "acceptedAnswers": ["c", "ciclostil"],
+        "question": "El cronista describe el abanico como un código secreto. Si un hombre se abanicaba de forma lenta y ostentosa por La Rambla, ¿qué mensaje estaba enviando?",
+        "acceptedAnswers": ["c", "que era homosexual y estaba abierto a conocer a alguien"],
         "caseSensitive": false
       },
       "choices": ["A", "B", "C", "D"],
       "options": [
-        "Una prensa tipográfica",
-        "Un telar mecánico",
-        "Un ciclostil",
-        "Una máquina de escribir"
+        "Que tenía mucho calor.",
+        "Que era artista y buscaba público.",
+        "Que era homosexual y estaba abierto a conocer a alguien.",
+        "Que estaba esperando a un familiar."
+      ],
+      "feedback": {
+        "correct": "¡Exacto! El abanico era un lenguaje de resistencia silenciosa.",
+        "wrong": "No exactamente... piensa en un gesto que comunicaba algo más que calor."
+      },
+      "location": {
+        "name": "La Rambla",
+        "type": "Point",
+        "coordinates": [2.17025, 41.385222]
+      }
+    },
+    {
+      "order": 2,
+      "id": "valentia-02",
+      "type": "narrative",
+      "title": "Recompensa 1",
+      "description": "¡Exacto! Un simple abanico se convertía en una herramienta de conexión y resistencia. Era el saludo secreto antes de arriesgarse a una conversación. ¡Crucemos al Carrer de la Boqueria!",
+      "media": {
+        "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810496/valentia-logro-1_k0agfp.png"
+        },
+      "location": {
+        "name": "La Rambla",
+        "type": "Point",
+        "coordinates": [2.17025, 41.385222]
+      }
+    },
+    {
+      "order": 3,
+      "id": "valentia-03",
+      "type": "voice",
+      "title": "Enigma 2: La Contraseña del 'Gindy'",
+      "description": "Crónica: 'Estoy en el laberinto del Gótico. Por estas calles se escondían los Gindys, bares gais clandestinos sin cartel. Para entrar, tenías que conocer la contraseña. Era una frase sencilla: la llave para entrar en un oasis de normalidad.'",
+      "media": {
+        "imageUrl1": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810402/valentia-pregunta-3_bnbwuo.jpg",
+        "imageUrl2": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810402/valentia-pregunta-4_cf3ive.webp"
+        },
+      "riddle": {
+        "question": "La contraseña para entrar al 'Gindy' era:",
+        "acceptedAnswers": ["aquí vive un amigo", "AQUI VIVE UN AMIGO"],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "text",
+        "description": "Opción para escribir la contraseña manualmente."
+      },
+      "location": {
+        "name": "Barrio Gótico",
+        "type": "Point",
+        "coordinates": [2.173583, 41.378083]
+      }
+    },
+    {
+      "order": 4,
+      "id": "valentia-04",
+      "type": "narrative",
+      "title": "Recompensa 2",
+      "description": "¡Contraseña correcta! Dentro de los Gindys se podía bailar, charlar y ser uno mismo durante unas horas. Eran pequeños refugios contra la hostilidad.",
+      "media": {
+        "imageUrl1": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810404/valentia-logro-2_moloz0.png"
+        },
+      "location": {
+        "name": "Barrio Gótico",
+        "type": "Point",
+        "coordinates": [2.173583, 41.378083]
+      }
+    },
+    {
+      "order": 5,
+      "id": "valentia-05",
+      "type": "location",
+      "title": "Enigma 3: La Transgresión sobre el Escenario",
+      "description": "Crónica: 'Aquí se alzaba La Criolla, el cabaret más salvaje de la ciudad. Antes de la guerra, fue uno de los pocos lugares donde la homosexualidad y la transexualidad tenían visibilidad sobre el escenario.'",
+      "media": {
+        "imageUrl1": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810403/valentia-pregunta-5_kffgtk.jpgg"
+        },
+      "riddle": {
+        "question": "¿Qué apodo se les daba a los artistas que actuaban vestidos de mujer?",
+        "acceptedAnswers": ["transformistas", "travestis"],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "text",
+        "description": "Botón para responder si el GPS no funciona."
+      },
+      "location": {
+        "name": "Rambla del Raval",
+        "type": "Point",
+        "coordinates": [2.17575, 41.378694]
+      }
+    },
+    {
+      "order": 6,
+      "id": "valentia-06",
+      "type": "photo",
+      "title": "Enigma 4: El Código de la Sirena",
+      "description": "Crónica: 'He llegado al Carrer de la Guàrdia. Aquí estaba Ca la Daniel’s, el primer bar refugio para lesbianas. Su dueña, Bàrbara, conocida como La Leona, protegía a su clientela con ingenio: su tatuaje avisaba del peligro.'",
+      "media": {
+        "imageUrl1": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760810404/valentia-logro-2_moloz0.png"
+        },
+      "riddle": {
+        "question": "¿Qué apodo, que es también un animal, tenía la dueña del bar?",
+        "acceptedAnswers": ["leona"],
+        "caseSensitive": false
+      },
+      "accessibility": {
+        "type": "text",
+        "description": "Opción para escribir la respuesta si no puedes hacer la foto."
+      },
+      "location": {
+        "name": "Carrer de la Guàrdia",
+        "type": "Point",
+        "coordinates": [2.174889, 41.381667]
+      }
+    },
+    {
+      "order": 7,
+      "id": "valentia-07",
+      "type": "riddle",
+      "title": "Enigma 5: El Refugio Clandestino",
+      "description": "Crónica: 'Estoy en la Plaça del Teatre. Aquí cerca había urinarios públicos que, aunque tristes, fueron puntos de encuentro para hombres homosexuales bajo una ley represiva.'",
+      "riddle": {
+        "question": "¿Cuál era el nombre de esta ley que perseguía a los homosexuales, entre otros, y que empezaba por 'Ley de Vagos y...'? ",
+        "acceptedAnswers": ["maleantes"],
+        "caseSensitive": false
+      },
+      "location": {
+        "name": "Plaça del Teatre",
+        "type": "Point",
+        "coordinates": [2.170278, 41.377944]
+      }
+    },
+    {
+      "order": 8,
+      "id": "valentia-08",
+      "type": "quiz",
+      "title": "Enigma 6: El Grito de Libertad de Ocaña",
+      "description": "Crónica: 'Termino mi crónica en la Plaça Reial, el escenario de José Pérez Ocaña. Con la muerte de Franco, Ocaña se convirtió en la libertad hecha persona. Pintor, performer y símbolo del Orgullo.'",
+      "riddle": {
+        "question": "¿Qué hacía en esta plaza que lo convirtió en un icono de la libertad?",
+        "acceptedAnswers": ["c", "se vestía de mujer y actuaba de forma provocadora y artística"],
+        "caseSensitive": false
+      },
+      "choices": ["A", "B", "C", "D"],
+      "options": [
+        "Organizaba debates políticos secretos.",
+        "Vendía cuadros a los turistas.",
+        "Se vestía de mujer y actuaba de forma provocadora y artística.",
+        "Repartía panfletos de forma anónima."
       ],
       "location": {
-        "name": "La Sedeta",
+        "name": "Plaça Reial",
         "type": "Point",
-        "coordinates": [2.1556, 41.4060]
+        "coordinates": [2.175472, 41.379917]
       }
     },
     {
-      "order": 10,
-      "id": "tinta-10",
+      "order": 9,
+      "id": "valentia-09",
       "type": "narrative",
-      "title": "Recompensa 5",
-      "description": "¡Exacto, un ciclostil! Esta máquina permitía reproducir cientos de copias de panfletos en minutos. Cada impresión era un acto de resistencia. Imagina a los obreros, tras su jornada, imprimiendo en secreto la palabra que liberaba conciencias. La Sedeta fue el corazón de esa revolución silenciosa.",
+      "title": "Recompensa Final",
+      "description": "¡Hemos completado la ruta de la valentía! Cada parada ha sido un homenaje a quienes lucharon por amar sin miedo. Gracias a elles, las calles de Barcelona brillan más libres hoy.",
       "location": {
-        "name": "La Sedeta",
+        "name": "Plaça Reial",
         "type": "Point",
-        "coordinates": [2.1556, 41.4060]
-      }
-    },
-    {
-      "order": 11,
-      "id": "tinta-11",
-      "type": "narrative",
-      "title": "Logro Final",
-      "description": "¡Hemos completado la crónica de la tinta y la libertad! Este viaje muestra que la resistencia más poderosa no siempre necesita armas; a veces basta con papel, tinta y valentía. Desde el campanario que marcaba las horas de la dictadura hasta La Sedeta, donde la palabra se convirtió en acción, hemos descubierto cómo una ciudad resistió con creatividad y coraje. Hoy, las mismas paredes que protegieron la palabra, ahora la celebran. Porque cada página impresa sigue siendo, en el fondo, un acto de libertad.",
-      "location": {
-        "name": "La Sedeta",
-        "type": "Point",
-        "coordinates": [2.1556, 41.4060]
+        "coordinates": [2.175472, 41.379917]
       }
     }
   ]
 }
-
-
