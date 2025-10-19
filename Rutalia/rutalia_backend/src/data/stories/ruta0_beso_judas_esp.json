@@ -1,33 +1,72 @@
 {
-  "title": "El beso de Judas",
-  "slug": "ruta0-beso-judas",
+  "title": "El Beso de Judas",
+  "slug": "beso-judas",
   "summary": "Explora el simbolismo del número 33 y descubre el misterio del beso que selló una traición.",
   "theme": "historia",
-  "neighborhood": "Sagrada Família (virtual)",
+  "neighborhood": "Sagrada Família",
   "coverImageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760174513/judas-cover_vqpsgx.jpg",
-  "durationMinutes": 15,
+  "durationMinutes": 25,
   "tags": [
-    "tutorial",
-    "prueba",
-    "desde casa"
+    "test",
+    "numerologia",
+    "religio",
+    "art",
+    "barcelona"
   ],
+  "language": "es",
+  "difficulty": "easy",
+  "estimatedSteps": 5,
+  "createdBy": "Rutalia Team",
+  "updatedAt": "2025-10-13T12:00:00.000Z",
+  "version": "1.0",
+  "requires": {
+    "gps": false,
+    "camera": false,
+    "voice": true
+  },
+  "analytics": {
+    "category": "educational",
+    "kpiTags": [
+      "engagement",
+      "learning",
+      "faith"
+    ]
+  },
   "status": "published",
-  "publishedAt": "2025-09-01T00:00:00.000Z",
+  "publishedAt": "2025-10-01T10:00:00.000Z",
+  "startLocation": {
+    "type": "Point",
+    "coordinates": [
+      0,
+      0
+    ],
+    "name": "Sagrada Família"
+  },
   "milestones": [
     {
       "order": 0,
+      "id": "judas-00",
       "type": "narrative",
       "title": "Introducción",
-      "description": "En una de las fachadas de la Sagrada Família hay una estatua con un cuadro mágico al lado. La estatua representa a Judas, seguidor de Jesús, pero la leyenda que envuelve a la escultura es mucho más romántica. Se dice que si dos personas enamoradas se besan debajo de esa estatua, su amor durará para siempre. ¡Vamos a descubrir por qué se llama mágico!"
+      "description": "En una de las fachadas de la Sagrada Família hay una estatua con un cuadro mágico al lado. La estatua representa a Judas, seguidor de Jesús, pero la leyenda que envuelve a la escultura es mucho más romántica. Se dice que si dos personas enamoradas se besan debajo de esa estatua, su amor durará para siempre. ¡Vamos a descubrir por qué se llama mágico!",
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
     },
     {
       "order": 1,
+      "id": "judas-01",
       "type": "riddle",
       "title": "Enigma 1 — Primera fila",
       "description": "¿Cuál es el resultado de la suma de todos los números de la primera fila del cuadrado mágico?",
       "media": {
         "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548550/judas-pregunta-1_1_rlg6ao.jpg"
-        },
+      },
       "riddle": {
         "question": "Suma de la primera fila",
         "acceptedAnswers": [
@@ -36,31 +75,42 @@
         ],
         "caseSensitive": false
       },
-      "clues": [
-        "No te compliques, solo tienes que fijarte en la primera línea horizontal de números y sumarlos uno a uno.",
-        "Los números que tienes que sumar son: 1, 14, 14 y 4.",
-        "La respuesta es 33."
-      ],
-      "points": 10,
-      "hintPenalty": 3
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
     },
     {
       "order": 2,
+      "id": "judas-02",
       "type": "narrative",
       "title": "Recompensa 1",
       "description": "¡Así es! La suma de los números es 33. Es un número muy especial para la religión católica: Jesús murió a los 33 años, crucificado. Su sacrificio representa la redención de los pecados de la humanidad, y es conmemorado cada Semana Santa.",
       "media": {
         "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548851/judas-recompensa-1_uz8nt7.jpg"
-        }
+      },
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
     },
     {
       "order": 3,
-      "type": "riddle",
+      "id": "judas-03",
+      "type": "voice",
       "title": "Enigma 2 — Segunda fila (voz o texto)",
       "description": "Di (o escribe) el resultado de la suma de los números de la segunda fila.",
       "media": {
         "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548549/judas-pregunta-2_knbyfi.jpg"
-        },
+      },
       "riddle": {
         "question": "Suma de la segunda fila",
         "acceptedAnswers": [
@@ -69,31 +119,46 @@
         ],
         "caseSensitive": false
       },
-      "clues": [
-        "La operación es la misma que antes, pero esta vez céntrate en la segunda línea de números del cuadrado.",
-        "Suma los siguientes números: 11, 7, 6 y 9.",
-        "La respuesta es 33."
-      ],
-      "points": 10,
-      "hintPenalty": 3
+      "accessibility": {
+        "type": "text",
+        "description": "Botó per escriure '33' si no pots fer servir el micròfon."
+      },
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
     },
     {
       "order": 4,
+      "id": "judas-04",
       "type": "narrative",
       "title": "Recompensa 2",
       "description": "¡Efectivamente, también 33! Si sumamos las filas, el resultado siempre es 33. El Salmo 33 alaba a Dios por su poder, y algunos lo relacionan con los milagros de Jesús.",
       "media": {
         "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760174509/judas-recompensa-2_o8ovgr.jpg"
-        }
+      },
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
     },
     {
       "order": 5,
+      "id": "judas-05",
       "type": "quiz",
       "title": "Enigma 3 — ¿Y las columnas?",
       "description": "¿Qué número da la suma de los números de una misma columna?",
       "media": {
         "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548549/judas-pregunta-3_lsu6wg.jpg"
-        },
+      },
       "riddle": {
         "question": "Suma de una columna",
         "acceptedAnswers": [
@@ -103,31 +168,54 @@
         ],
         "caseSensitive": false
       },
-      "clues": [
-        "¿Qué resultado has obtenido en las dos sumas anteriores? Quizás haya un patrón...",
-        "Si todas las filas suman 33 y es un cuadrado mágico, las columnas también.",
-        "La respuesta es 33."
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
       ],
-      "points": 10,
-      "hintPenalty": 3
+      "options": [
+        "13",
+        "31",
+        "23",
+        "33"
+      ],
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
     },
     {
       "order": 6,
+      "id": "judas-06",
       "type": "narrative",
       "title": "Recompensa 3",
       "description": "¡Correcto! También las columnas (y las diagonales) suman 33. A esto se le llama Cuadrado Mágico. El más antiguo conocido es el Lo Shu, originado en la antigua China.",
       "media": {
         "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548595/judas-recompensa-3_fdfrz4.png"
-        }
+      },
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
     },
     {
       "order": 7,
+      "id": "judas-07",
       "type": "riddle",
       "title": "Enigma 4 — Casilla faltante",
       "description": "¿Qué número falta para completar el cuadrado mágico?",
       "media": {
         "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548562/judas-pregunta-4_nb48gl.png"
-        },
+      },
       "riddle": {
         "question": "Número faltante",
         "acceptedAnswers": [
@@ -135,31 +223,42 @@
         ],
         "caseSensitive": false
       },
-      "clues": [
-        "Concéntrate en la fila o columna donde está la casilla vacía.",
-        "Los números de la fila son 10, 11 y 5. La suma es 26. ¿Qué falta para 33?",
-        "La respuesta es 7."
-      ],
-      "points": 10,
-      "hintPenalty": 3
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
     },
     {
       "order": 8,
+      "id": "judas-08",
       "type": "narrative",
       "title": "Recompensa 4",
       "description": "¡Correcto! ¡La respuesta es 7! Los cuadrados mágicos con repetición, como este, también se conocen como 'semánticos'.",
       "media": {
         "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760174510/judas-recompensa-4_yrjdqt.png"
-        }
+      },
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
     },
     {
       "order": 9,
+      "id": "judas-09",
       "type": "quiz",
       "title": "Enigma 5 — El beso de traición",
       "description": "¿Cómo se llama la persona que traicionó a Jesús con un beso?",
       "media": {
         "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548749/judas-pregunta-5_r8odhh.jpg"
-        },
+      },
       "riddle": {
         "question": "¿Quién traicionó a Jesús con un beso?",
         "acceptedAnswers": [
@@ -170,28 +269,59 @@
         ],
         "caseSensitive": false
       },
-      "clues": [
-        "La expresión 'un beso de...' se usa para describir una traición.",
-        "El nombre que buscas está en el título.",
-        "La respuesta es Judas."
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
       ],
-      "points": 10,
-      "hintPenalty": 3
+      "options": [
+        "Mateu",
+        "Jaume",
+        "Marc",
+        "Judes"
+      ],
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
     },
     {
       "order": 10,
+      "id": "judas-10",
       "type": "narrative",
       "title": "Recompensa 5",
-      "description": "Exacto, fue Judas. Lo entregó por 30 monedas de plata, sellando su traición con un beso, igual que en 'El Padrino'."
+      "description": "Exacto, fue Judas. Lo entregó por 30 monedas de plata, sellando su traición con un beso, igual que en 'El Padrino'.",
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
     },
     {
       "order": 11,
+      "id": "judas-11",
       "type": "narrative",
       "title": "Recompensa Final",
       "description": "¡Hemos desvelado la magia del 33! Cuadrados mágicos, simbolismo bíblico y un beso de traición se unen en esta historia. ¿Tu beso será de amor… o de traición?",
       "media": {
         "imageUrl": "https://res.cloudinary.com/dtkgpmfeo/image/upload/v1760548571/judas-logro-final_b9naeh.png"
-        }
+      },
+      "location": {
+        "name": "Sagrada Família",
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
     }
   ]
 }
