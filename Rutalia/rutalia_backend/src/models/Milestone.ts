@@ -89,7 +89,7 @@ const MilestoneSchema = new Schema<IMilestone>(
     description: String,
     type: {
       type: String,
-      enum: ['narrative', 'location', 'riddle', 'photo', 'quiz', 'checkpoint'],
+      enum: ['narrative', 'location', 'riddle', 'photo', 'quiz', 'checkpoint', 'voice', 'camera', 'gps'],
       default: 'narrative',
     },
     media: { type: MediaSchema, default: undefined },

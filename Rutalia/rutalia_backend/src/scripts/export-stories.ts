@@ -1,9 +1,9 @@
 import 'dotenv/config';
 import fs from 'node:fs';
 import path from 'node:path';
-import { connectDB } from '../config/db.js';
-import { Story } from '../models/Story.js';
-import { Milestone } from '../models/Milestone.js';
+import { connectDB } from '../config/db';
+import { Story } from '../models/Story';
+import { Milestone } from '../models/Milestone';
 
 // === CLI args ===
 // Ejemplos:
